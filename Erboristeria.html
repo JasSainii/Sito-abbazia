@@ -1,69 +1,92 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Erboristeria Natura</title>
-  <link rel="stylesheet" href="abbazia.css">
+  <link rel="stylesheet" href="abbazia.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- HEADER -->
-  <header class="header">
-    <div class="logo">🌿 Erboristeria Natura</div>
-    <nav class="navbar">
-      <a href="corsi.html">corsi</a>
-      <a href="chi siamo.html">Chi siamo</a>
-      <a href="storia.html">storia</a>
+  <header>
+    <span>🌿 Erboristeria Natura</span>
+    <nav>
+      <a href="#prodotti">Prodotti</a>
+      <a href="#chi-siamo">Chi siamo</a>
+      <a href="#contatti">Contatti</a>
     </nav>
   </header>
 
-  
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-text">
-      <h1>Benvenuto nella nostra erboristeria</h1>
-      <p>Scopri prodotti naturali per il tuo benessere, realizzati con amore e ingredienti biologici.</p>
-      <a href="#prodotti" class="btn">Scopri i prodotti</a>
-    </div>
-    <div class="hero-image">
+    <h1>Benvenuto nella nostra erboristeria</h1>
+    <p>Scopri prodotti naturali per il tuo benessere, realizzati con amore e ingredienti biologici.</p>
+    <div class="carousel-dots">
+      <span></span><span></span><span></span>
     </div>
   </section>
 
-  <!-- Prodotti -->
-  <section id="prodotti" class="prodotti">
+  <!-- PRODOTTI -->
+  <section id="prodotti" class="content">
     <h2>I nostri prodotti</h2>
-    <div class="product-grid">
+    <div class="team-section">
 
-      <div class="product-card">
-        <h3>Tisana Rilassante</h3>
-        <p>Mix di erbe officinali per un momento di relax.</p>
-        <span class="prezzo">€9,90</span>
+      <div class="person-box">
+        <div class="person-image">
+          <img src="https://images.unsplash.com/photo-1609016617751-e80552ae6ec2?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tisana rilassante">
+        </div>
+        <div class="person-text">
+          <h3>Tisana Rilassante</h3>
+          <p>Mix di erbe officinali per un momento di relax naturale e rigenerante.</p>
+          <p><strong>Prezzo:</strong> €9,90</p>
+        </div>
       </div>
 
-      <div class="product-card">
-        <h3>Olio di Lavanda</h3>
-        <p>Olio essenziale puro per aromaterapia e massaggi.</p>
-        <span class="prezzo">€14,50</span>
+      <div class="person-box">
+        <div class="person-image">
+          <img src="https://images.unsplash.com/photo-1623826538391-4e066d422976?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Olio di lavanda">
+        </div>
+        <div class="person-text">
+          <h3>Olio di Lavanda</h3>
+          <p>Olio essenziale puro, perfetto per massaggi rilassanti o aromaterapia.</p>
+          <p><strong>Prezzo:</strong> €14,50</p>
+        </div>
       </div>
 
-      <div class="product-card">
-        <h3>Crema alla Calendula</h3>
-        <p>Lenitiva e idratante, ideale per pelli sensibili.</p>
-        <span class="prezzo">€12,00</span>
+      <div class="person-box">
+        <div class="person-image">
+          <img src="https://images.unsplash.com/photo-1634449277883-534da4f7c97a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Crema alla calendula">
+        </div>
+        <div class="person-text">
+          <h3>Crema alla Calendula</h3>
+          <p>Lenitiva e idratante, ideale per pelli sensibili e irritate.</p>
+          <p><strong>Prezzo:</strong> €12,00</p>
+        </div>
       </div>
 
     </div>
   </section>
 
   <!-- CHI SIAMO -->
-  <section id="chi-siamo" class="chi-siamo">
+  <section id="chi-siamo" class="content">
     <h2>Chi siamo</h2>
-    <p>Siamo un team di esperti appassionati di erbe e benessere naturale. Lavoriamo ogni giorno per offrirti prodotti sani e sostenibili.</p>
+    <div class="team-section">
+      <div class="person-box">
+        <div class="person-image">
+          <img src="https://images.unsplash.com/photo-1564793789654-344f7c6a460b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Erborista 1" />
+        </div>
+        <div class="person-text">
+          <p>Siamo un team di erboristi appassionati di natura e benessere. Ogni nostro prodotto nasce da una ricerca attenta e da una produzione sostenibile.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- FOOTER -->
   <footer id="contatti" class="footer">
-    <p>Contattaci: info@erboristerianatura.it | Tel: 0123 456789</p>
+    <p>Contattaci: <a href="mailto:info@erboristerianatura.it">info@erboristerianatura.it</a> | Tel: 0123 456789</p>
     <p>© 2025 Erboristeria Natura</p>
   </footer>
 
