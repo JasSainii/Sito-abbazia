@@ -32,6 +32,13 @@ header span {
   font-family: 'Playfair Display', serif;
 }
 
+/* TITOLO come link senza sottolineatura/blu */
+header span a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 nav a {
   text-decoration: none;
   color: #4b3a2f;
