@@ -2,128 +2,116 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Abbazia di Villanova – Storia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storia dell'Abbazia</title>
   <link rel="stylesheet" href="abbazia.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <span>
-      <a href="index.html">Abbazia di Villanova</a>
-    </span>
-    <nav>
-      <a href="chi siamo.html">Chi siamo</a>
-      <a href="corsi.html">Corsi</a>
-      <a href ="Erboristeria.html">Erboristeria</a> 
-      <a href ="Musei.html">Musei</a> 
-      
-    </nav>
-  </header>
-
   <!-- HERO -->
   <section class="hero">
-    <h1>Storia dell’Abbazia</h1>
-    <p>Un viaggio attraverso i secoli per scoprire l'evoluzione storica, architettonica e spirituale dell'Abbazia di Villanova.</p>
-    <div class="carousel-dots">
-      <span></span><span></span><span></span><span></span><span></span>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Storia dell'Abbazia</h1>
+      <p>Un viaggio attraverso i secoli per scoprire l'evoluzione di un luogo sacro.</p>
     </div>
   </section>
 
   <!-- TIMELINE -->
-  <section class="content">
+  <section class="timeline-section">
     <h2>La storia dell'abbazia di Villanova</h2>
+
     <div class="timeline">
-
-      <div class="entry left">
-        <div class="marker"></div>
-        <h3>1117</h3>
-        <p>Terremoto. Probabilmente crolla parte della chiesa romanica costruita nell'XI secolo.</p>
+      <!-- Eventi (scritti a mano invece che con map) -->
+      <div class="event top">
+        <div class="card">
+          <h3>1117</h3>
+          <p>Terremoto. Probabilmente crolla parte della chiesa romanica costruita nell'XI secolo.</p>
+        </div>
+        <span class="dot"></span>
       </div>
 
-      <div class="entry right">
-        <div class="marker"></div>
-        <h3>1136</h3>
-        <p>Papa Innocenzo II pone l'Abbazia sotto la protezione del monastero cluniacense di San Benedetto Polirone.</p>
+      <div class="event bottom">
+        <div class="card">
+          <h3>1136</h3>
+          <p>Papa Innocenzo II pone l'Abbazia sotto la protezione del monastero cluniacense di San Benedetto Polirone.</p>
+        </div>
+        <span class="dot"></span>
       </div>
 
-      <div class="entry left">
-        <div class="marker"></div>
-        <h3>1149</h3>
-        <p>L'abate Uberto comincia la costruzione del campanile.</p>
+      <div class="event top">
+        <div class="card">
+          <h3>1149</h3>
+          <p>L'abate Uberto comincia la costruzione del campanile.</p>
+        </div>
+        <span class="dot"></span>
       </div>
 
-      <div class="entry right">
-        <div class="marker"></div>
-        <h3>1195</h3>
-        <p>I monaci presenti nell'Abbazia sono 10.</p>
+      <div class="event bottom">
+        <div class="card">
+          <h3>1420</h3>
+          <p>L'abate Nicola Anzeleri di Vicenza fa costruire la nuova sagrestia.</p>
+        </div>
+        <span class="dot"></span>
       </div>
 
-      <div class="entry left">
-        <div class="marker"></div>
-        <h3>1199</h3>
-        <p>Prima notizia relativa all'esistenza del chiostro.</p>
+      <div class="event top">
+        <div class="card">
+          <h3>1562</h3>
+          <p>Il Concilio di Trento annulla le commende. L'Abbazia viene concessa alla congregazione degli Olivetani.</p>
+        </div>
+        <span class="dot"></span>
       </div>
 
-      <div class="entry right">
-        <div class="marker"></div>
-        <h3>1420</h3>
-        <p>L'abate Nicola Anzeleri di Vicenza fa costruire la nuova sagrestia.</p>
+      <div class="event bottom">
+        <div class="card">
+          <h3>1771</h3>
+          <p>Soppressione del monastero da parte della Repubblica Veneta.</p>
+        </div>
+        <span class="dot"></span>
       </div>
 
-      <div class="entry left">
-        <div class="marker"></div>
-        <h3>1562</h3>
-        <p>Il Concilio di Trento annulla le commende. L'Abbazia viene concessa alla congregazione degli Olivetani di Santa Maria in Organo.</p>
+      <div class="event top">
+        <div class="card">
+          <h3>1796</h3>
+          <p>Battaglia d'Arcole. La chiesa viene usata dagli austriaci come ospedale da campo.</p>
+        </div>
+        <span class="dot"></span>
       </div>
 
-      <div class="entry right">
-        <div class="marker"></div>
-        <h3>1771</h3>
-        <p>Soppressione del monastero da parte della Repubblica Veneta.</p>
+      <div class="event bottom">
+        <div class="card">
+          <h3>1927</h3>
+          <p>La cripta, che era stata venduta nel 1772, viene riunita alla chiesa.</p>
+        </div>
+        <span class="dot"></span>
       </div>
 
-      <div class="entry left">
-        <div class="marker"></div>
-        <h3>1772</h3>
-        <p>I beni dell'Abbazia sono acquistati dal nobile Nicolò Erizzo.</p>
+      <div class="event top">
+        <div class="card">
+          <h3>1949</h3>
+          <p>Papa Pio XII concede al parroco di Villanova di fregiarsi del titolo di abate.</p>
+        </div>
+        <span class="dot"></span>
       </div>
 
-      <div class="entry right">
-        <div class="marker"></div>
-        <h3>1796</h3>
-        <p>Battaglia d'Arcole. La chiesa viene usata dagli austriaci come ospedale da campo.</p>
+      <div class="event bottom">
+        <div class="card">
+          <h3>1990</h3>
+          <p>L'Abbazia si riappropria degli edifici monasteriali.</p>
+        </div>
+        <span class="dot"></span>
       </div>
 
-      <div class="entry left">
-        <div class="marker"></div>
-        <h3>1927</h3>
-        <p>La cripta, che era stata venduta nel 1772, viene riunita alla chiesa.</p>
+      <div class="event top">
+        <div class="card">
+          <h3>1994-2016</h3>
+          <p>Importanti lavori di restauro agli edifici monasteriali e al campanile.</p>
+        </div>
+        <span class="dot"></span>
       </div>
-
-      <div class="entry right">
-        <div class="marker"></div>
-        <h3>1949</h3>
-        <p>Papa Pio XII, concede al parroco di Villanova di fregiarsi del titolo di abate.</p>
-      </div>
-      
-      <div class="entry left">
-        <div class="marker"></div>
-        <h3>1990</h3>
-        <p>L'Abbazia si riappropria degli edifici monasteriali.</p>
-      </div>
-
-      <div class="entry right">
-        <div class="marker"></div>
-        <h3>1994-2016</h3>
-        <p>Lavori di restauro vari ad edifici monasteriali e campanile.</p>
-      </div>
-
     </div>
   </section>
 
 </body>
 </html>
-
-
