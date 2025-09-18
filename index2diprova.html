@@ -5,36 +5,38 @@
   <title>Benvenuto</title>
   <link rel="stylesheet" href="abbazia.css">
   <style>
-    .grid-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  max-width: 1000px;  
-  margin: 0 auto;     
-  justify-items: center; 
-  align-items: stretch;  
-  text-align: center;
+    /* Griglia sottopagine */
+.grid-links {
+  display: grid;                           
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  
+  gap: 30px;                               /* Spazio tra gli elementi della griglia */
+  max-width: 1000px;                       /* Limita la larghezza massima della griglia */
+  margin: 0 auto;                          /* Centra la griglia orizzontalmente */
+  justify-items: center;                   /* Centra ogni elemento dentro la sua cella */
+  align-items: stretch;                    /* Gli elementi si allungano per uniformare le altezze */
+  text-align: center;                      /* Testo centrato all’interno delle celle */
 }
 
 .grid-links a {
-  background: #f5f2eb;
-  padding: 30px 20px;
-  border-radius: 10px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #4b3a2f;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  width: 100%;         /* uniforma larghezza */
-  max-width: 280px;    /* mantiene simmetria */
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  background: #f5f2eb;                     /* Colore di sfondo dei box */
+  padding: 30px 20px;                      /* Spazio interno (verticale 30px, orizzontale 20px) */
+  border-radius: 10px;                     
+  font-size: 1.2em;                        
+  font-weight: bold;                       
+  color: #4b3a2f;                          
+  text-decoration: none;                   /* Rimuove la sottolineatura dei link */
+  transition: all 0.3s ease;               
+  width: 100%;                             /* Ogni box occupa tutta la larghezza disponibile */
+  max-width: 280px;                        /* Imposta una larghezza massima per la simmetria */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08); /* Ombra leggera sotto i box */
 }
 
 .grid-links a:hover {
-  background: #cbb994;
-  color: #fff;
-  transform: translateY(-5px);
+  background: #cbb994;                     /* Cambia sfondo al passaggio del mouse */
+  color: #fff;                            
+  transform: translateY(-5px);             
 }
+
   </style>
 </head>
 <body>
@@ -55,7 +57,7 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Benvenuti all'Abbazia di villanova</h1>
+      <h1>Benvenuti all'Abbazia di Villanova</h1>
       <p>Un luogo di storia, cultura e spiritualità immerso nella natura. Scopri la nostra erboristeria, i musei, i corsi e i tour guidati.</p>
     </div>
   </section>
