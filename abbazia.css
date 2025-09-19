@@ -45,6 +45,7 @@
   /* Hero */
   .hero {
     background: url('img/abbazia.jpg') bottom/cover no-repeat;
+	background-position-y: 72%;
     text-align: center;
     padding: 150px 100px;
     min-height: 80vh;
@@ -58,11 +59,13 @@
     font-size: 3em;
     margin-bottom: 20px;
     color: #53290c;
+    -webkit-text-stroke: #000000 2px;
   }
   .hero p { 
     font-size: 1.2em; 
     max-width: 800px;
     margin: 0 auto;
+    -webkit-text-stroke: #000000 1px;
   }
   
   /* Sezioni contenuto */
@@ -103,6 +106,9 @@
     color: #222; 
   }
   
+  .timeline-section {
+    text-align: center;
+  }
   /* Timeline Verticale */
   .timeline {
     position: relative;
