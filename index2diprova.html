@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Abbazzia di Villanova</title>
+  <link rel="stylesheet" href="abbazia.css">
+  <style>
+.grid-links {
+  display: grid;                           
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  
+  gap: 30px;                               /* Spazio tra gli elementi della griglia */
+  max-width: 1000px;                       /* Limita la larghezza massima della griglia */
+  margin: 0 auto;                          /* Centra la griglia orizzontalmente */
+  justify-items: center;                   /* Centra ogni elemento dentro la sua cella */
+  align-items: stretch;                    /* Gli elementi si allungano per uniformare le altezze */
+  text-align: center;                      /* Testo centrato all’interno delle celle */
+}
+
+.grid-links a {
+  background: #f5f2eb;                     /* Colore di sfondo dei box */
+  padding: 30px 20px;                      /* Spazio interno (verticale 30px, orizzontale 20px) */
+  border-radius: 10px;                     
+  font-size: 1.2em;                        
+  font-weight: bold;                       
+  color: #4b3a2f;                          
+  text-decoration: none;                   /* Rimuove la sottolineatura dei link */
+  transition: all 0.3s ease;               
+  width: 100%;                             /* Ogni box occupa tutta la larghezza disponibile */
+  max-width: 280px;                        /* Imposta una larghezza massima per la simmetria */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08); /* Ombra leggera sotto i box */
+}
+
+.grid-links a:hover {
+  background: #cbb994;                     /* Cambia sfondo al passaggio del mouse */
+  color: #fff;                            
+  transform: translateY(-5px);             
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <span><a href="index.html">Abbazia di villanova</a></span>
+    <nav>
+      <a href="storia.html">Storia</a>
+      <a href="erboristeria.html">Erboristeria</a>
+      <a href="musei.html">Musei</a>
+      <a href="chisiamo2.html">Chi Siamo</a>
+      <a href="corsi.html">Corsi</a>
+      <a href="tour.html">Tour</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Benvenuti all'Abbazia di Villanova</h1>
+      <p>Un luogo di storia, cultura e spiritualità immerso nella natura. Scopri la nostra erboristeria, i musei, i corsi e i tour guidati.</p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="content">
+    <h2>Esplora le nostre aree</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="img/storia.jpg" alt="Storia">
+        <h3>Storia</h3>
+        <p>Scopri le radici antiche e i secoli di tradizione che rendono unica la nostra abbazia.</p>
+        <a href="storia.html">Scopri di più</a>
+      </div>
+      <div class="card">
+        <img src="img/erboristeria.jpg" alt="Erboristeria">
+        <h3>Erboristeria</h3>
+        <p>Un viaggio tra rimedi naturali, piante officinali e antiche conoscenze monastiche.</p>
+        <a href="erboristeria.html">Scopri di più</a>
+      </div>
+      <div class="card">
+        <img src="img/musei.jpg" alt="Musei">
+        <h3>Musei</h3>
+        <p>Collezioni d’arte, reperti storici e testimonianze di fede custodite nei nostri musei.</p>
+        <a href="musei.html">Scopri di più</a>
+      </div>
+      <div class="card">
+        <img src="img/chisiamo.jpg" alt="Chi siamo">
+        <h3>Chi Siamo</h3>
+        <p>Conosci la comunità e i valori che animano la vita dell’abbazia ogni giorno.</p>
+        <a href="chisiamo2.html">Scopri di più</a>
+      </div>
+      <div class="card">
+        <img src="img/corsi.jpg" alt="Corsi">
+        <h3>Corsi</h3>
+        <p>Partecipa ai corsi di meditazione, arte, cucina e molto altro organizzati in abbazia.</p>
+        <a href="corsi.html">Scopri di più</a>
+      </div>
+      <div class="card">
+        <img src="img/tour.jpg" alt="Tour">
+        <h3>Tour</h3>
+        <p>Vivi un’esperienza unica con le nostre visite guidate tra arte, natura e spiritualità.</p>
+        <a href="tour.html">Scopri di più</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Abbazia - Tutti i diritti riservati</p>
+    <p>
+      <a href="storia.html">Storia</a> | 
+      <a href="erboristeria.html">Erboristeria</a> | 
+      <a href="musei.html">Musei</a> | 
+      <a href="corsi.html">Corsi</a> | 
+      <a href="tour.html">Tour</a>
+    </p>
+  </footer>
+
+</body>
+</html>

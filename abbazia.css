@@ -1,263 +1,209 @@
 /* Reset */
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-  }
-  
-  /* Corpo */
-  body {
-    font-family: 'Open Sans', sans-serif;
-    background: #fdfcf9;
-    color: #2c2c2c;
-    line-height: 1.6;
-  }
-  
-  /* Header */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #fdfcf9;
+  color: #2c2c2c;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #ece8dd;
+  border-bottom: 2px solid #cbb994;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+header span a {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #6b4c3b;
+  font-family: 'Playfair Display', serif;
+  text-decoration: none;
+}
+nav a {
+  text-decoration: none;
+  color: #4b3a2f;
+  background: #d8cfc1;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+nav a:hover {
+  background: #b5a58e;
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  background: url('img/abbazia.jpg') bottom/cover no-repeat;
+  background-position-y: 72%;
+  text-align: center;
+  padding: 150px 100px;
+  min-height: 80vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #53290c;
+  -webkit-text-stroke: #000000 2px;
+}
+.hero p {
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto;
+  -webkit-text-stroke: #000000 1px;
+}
+
+/* Sezioni contenuto */
+.content {
+  padding: 60px 20px;
+  background: #fff;
+}
+.content h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+  color: #3b2a1f;
+}
+
+/* Timeline a serpente con posizionamento libero */
+.timeline-section {
+  text-align: center;
+}
+
+/* timeline è il contenitore di riferimento per gli .event (position: relative) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 2000px; /* mantiene la curva completa così come è nell'SVG */
+}
+
+/* LA CURVA RIMANE INVARIATA (stesso SVG data-uri) */
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 2000" preserveAspectRatio="none"><path d="M 500 0 C 500 200 950 200 950 400 C 950 600 50 600 50 800 C 50 1000 950 1000 950 1200 C 950 1400 50 1400 50 1600 C 50 1800 500 1800 500 2000" fill="none" stroke="%23d8cfc1" stroke-width="4"/></svg>');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* NOTA: event-container NON è posizionato; rimane statica così che .event faccia riferimento a .timeline */
+.event-container {
+  position: static; /* <-- importante */
+  height: auto;
+}
+
+/* Eventi posizionabili liberamente: le percentuali di top/left si riferiscono ora a .timeline */
+.event {
+  position: absolute;
+  z-index: 1;
+  max-width: 300px;
+  transform: translate(-50%, -50%); /* centra la card sul punto (top,left) */
+}
+
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ece8dd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #4b3a2f;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #2c2c2c;
+}
+
+/* Responsive: su schermi piccoli la curva si nasconde e gli eventi diventano statici sotto la hero */
+@media (max-width: 768px) {
   header {
-    background: #ece8dd;
-    border-bottom: 2px solid #cbb994;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-  }
-  header span a {
-    font-size: 1.4em;
-    font-weight: bold;
-    color: #6b4c3b;
-    font-family: 'Playfair Display', serif;
-    text-decoration: none;
-  }
-  nav a {
-    text-decoration: none;
-    color: #4b3a2f;
-    background: #d8cfc1;
-    padding: 6px 12px;
-    margin-left: 10px;
-    border-radius: 5px;
-  }
-  nav a:hover { 
-    background: #b5a58e; 
-    color: #fff; 
-  }
-  
-  /* Hero */
-  .hero {
-    background: url('img/abbazia.jpg') bottom/cover no-repeat;
-	background-position-y: 72%;
-    text-align: center;
-    padding: 150px 100px;
-    min-height: 80vh;
-    color: #fff;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-  }
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3em;
-    margin-bottom: 20px;
-    color: #53290c;
-    -webkit-text-stroke: #000000 2px;
-  }
-  .hero p { 
-    font-size: 1.2em; 
-    max-width: 800px;
-    margin: 0 auto;
-    -webkit-text-stroke: #000000 1px;
-  }
-  
-  /* Sezioni contenuto */
-  .content {
-    padding: 60px 20px;
-    background: #fff;
-  }
-  .content h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 40px;
-    font-family: 'Playfair Display', serif;
-    color: #3b2a1f;
-  }
-  
-  /* Box persone/prodotti */
-  .team-section { 
-    max-width: 1000px; 
-    margin: 0 auto; 
   }
   .box {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-  .box:nth-child(even) { 
-    flex-direction: row-reverse; 
-  }
-  .image img {
-    max-width: 300px;
-    border-radius: 8px;
-  }
-  .text, .person-text { 
-    flex: 1; 
-    font-size: 1.1em; 
-    color: #222; 
-  }
-  
-  .timeline-section {
+    flex-direction: column;
     text-align: center;
   }
-  /* Timeline Verticale */
+  .hero h1 {
+    font-size: 2em;
+  }
   .timeline {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 0;
+    width: 100%;
+    padding: 20px 0;
+    min-height: auto;
   }
-  
-  /* Linea verticale centrale */
-  .timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 4px;
-    background: linear-gradient(to bottom, #cbb994, #d8cfc1);
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-  
-  /* Eventi */
   .event {
-    position: relative;
-    width: 50%;
-    padding: 20px;
+    position: static;
+    transform: none;
+    margin: 20px auto;
   }
-  
-  .event.top {
-    left: 0;
-    text-align: right;
+  .timeline-line {
+    display: none;
   }
-  
-  .event.bottom {
-    left: 50%;
-    text-align: left;
-  }
-  
-  /* Card evento */
-  .card {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ece8dd;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    display: inline-block;
-    max-width: 300px;
-  }
-  
-  .card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    color: #4b3a2f;
-    margin-bottom: 8px;
-  }
-  
-  .card p {
-    font-size: 0.9rem;
-    color: #2c2c2c;
-  }
-  
-  /* Puntini */
-  .dot {
-    position: absolute;
-    top: 30px;
-    width: 16px;
-    height: 16px;
-    background: #f8f5f0;
-    border: 4px solid #6b4c3b;
-    border-radius: 50%;
-    z-index: 2;
-  }
-  
-  .event.top .dot {
-    right: -10px;
-  }
-  
-  .event.bottom .dot {
-    left: -10px;
-  }
-  
-  /* Footer */
-  footer {
-    background: #ece8dd;
-    padding: 20px;
-    text-align: center;
-    border-top: 2px solid #cbb994;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    header { 
-      flex-direction: column; 
-    }
-    .box { 
-      flex-direction: column; 
-      text-align: center; 
-    }
-    .hero h1 { 
-      font-size: 2em; 
-    }
-    .timeline {
-      width: 90%;
-      padding-left: 20px;
-    }
-    .event {
-      width: 100%;
-      left: 0;
-      text-align: left;
-      padding-left: 40px;
-      margin-bottom: 40px;
-    }
-    .event.top,
-    .event.bottom {
-      left: 0;
-    }
-    .dot {
-      left: 0;
-      top: 0;
-      transform: translateX(-50%);
-    }
-  }
-.tourbox {
-
-  gap: 30px;
-  align-items: center;
-  margin-bottom: 50px;
-  width:100%;
-  height: 100%;
-  
-  
 }
-.tourbox img{
-  width: 10%;
+
+.mappa-container {
+  position: relative;
+  max-width: 100%;
+  margin: 20px auto;
+  overflow: hidden; /* evita scroll orizzontale */
+}
+
+.mappa {
+  width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: block;
-  margin-left:auto;
-  margin-right:auto;
-
+  border-radius: 10px;
 }
-  
 
+.preview {
+  display: none;
+  position: absolute;
+  top: 10px;   /* dentro il container */
+  left: 10px;  /* dentro il container */
+  width: 180px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 1000;
+}
 
+.preview img {
+  width: 100%;
+  display: block;
+}
 
-
-
-
-
-
+.preview p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  text-align: center;
+}
 

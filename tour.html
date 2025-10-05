@@ -1,76 +1,53 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tour virtuale - Abbazia di Villanova</title>
-  <link rel="stylesheet" href="abbazia.css" />
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Virtuale - Abbazia di Villanova</title>
+  <link rel="stylesheet" href="abbazia.css">
 </head>
 <body>
- 
 
-  <!-- Header -->
   <header>
     <span>Abbazia di Villanova</span>
     <nav>
       <a href="chi siamo.html">chi siamo</a>
       <a href="storia.html">storia</a>
-      <a href ="Erboristeria.html"> erboristeria </a> 
-      <a href ="Musei.html"> musei </a> 
+      <a href="Erboristeria.html">erboristeria</a>
+      <a href="Musei.html">musei</a>
       <a href="corsi.html">corsi</a>
     </nav>
   </header>
 
-  <!-- Contenuto principale -->
   <main class="content">
     <h2>Tour Virtuale dell'Abbazia di Villanova</h2>
 
     <section class="tour">
-      <div class=" tourbox">
-        <div class="text">
-          <h3>TOUR VIRTUALE DI QUADRI</h3>
-          <p>
-            Benvenuti all'ingresso principale dell'Abbazia di Villanova. Qui potete ammirare l'architettura storica e iniziare il vostro viaggio attraverso i secoli.
-            
-          </p>
-          <!--<p onclick="mostraImmagine('img-quadri')">Clicca qui per vedere i quadri</p> -->
-        </div>
-        <div class="image">
-          <img id ="img-quadri" src="img/quadri.png" alt="Quadri"/>
-        </div>
-      </div>
+      <h3>Pitture Murali</h3>
+      <div class="mappa-container">
+        <!-- Mappa responsive con usemap -->
+        <img src="img/pitture.png" alt="Mappa Pitture" usemap="#mappaPitture" class="mappa">
 
-      <div class="tourbox">
-        <div class="text">
-          <h3>Sculture</h3>
-          <p>
-            La nostra collezione di sculture medievali offre uno sguardo affascinante sull'arte religiosa e la maestria artigianale dell'epoca.
-          </p>
-          <!--<p onclick="mostraImmagine('img-sculture')">Clicca qui per vedere le sculture</p> -->
-        </div>
-        <div class="image">
-          <img id ="img-sculture" src="img/sculture.png" alt="Sculture" />
-        </div>
-      </div>
+        <!-- Definizione map e aree -->
+       <map name="mappaPitture">
+          <area shape="circle" coords="1240,194,18" alt="Pittura 1" onmouseover="mostraOpera('pittura1')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1400,300,18" alt="Pittura 2" onmouseover="mostraOpera('pittura2')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1500,420,18" alt="Pittura 3" onmouseover="mostraOpera('pittura3')" onmouseout="nascondiOpera()">
+</map>
 
-      <div class="tourbox">
-        <div class="text">
-          <h3>Pitture murali</h3>
-          <p>
-           
-          </p>
-          <!--<p onclick="mostraImmagine('img-murali')">Clicca qui per vedere le pitture murali</p> -->
-        </div>
-        <div class="image">
-          <img id ="img-murali"src="img/pitture.png" alt=" Pitture murali" />
+        <!-- Anteprima -->
+        <div id="preview" class="preview">
+          <img src="" alt="">
+          <p id="titolo"></p>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- Libreria image-map-resizer -->
+  <script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+  <!-- JS tour -->
   <script src="tour.js"></script>
+
 </body>
-
 </html>
-
-
