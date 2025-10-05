@@ -1,7 +1,7 @@
 const opere = {
-  pittura1: { img: "img/pitture/pitture1.png", titolo: "Annunciazione" },
-  pittura2: { img: "img/pitture/pittura2.png", titolo: "Madonna col Bambino" },
-  pittura3: { img: "img/pitture/pittura3.png", titolo: "San Francesco" }
+  pittura1: { img: "img/pitture/pitture1.jpg", titolo: "Annunciazione" },
+  pittura2: { img: "img/pitture/pittura2.jpg", titolo: "Madonna col Bambino" },
+  pittura3: { img: "img/pitture/pittura3.jpg", titolo: "San Francesco" }
 };
 
 // Mostra anteprima
@@ -25,4 +25,5 @@ function nascondiOpera() {
 window.onload = function() {
   imageMapResize();
 };
+
 
