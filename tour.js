@@ -1,5 +1,5 @@
 const opere = {
-  pittura1: { img: "/img/pitture/pitture1.jpg", titolo: "Annunciazione" },
+  pittura1: { img: "img/pitture/pitture1.jpg", titolo: "Annunciazione" },
   pittura2: { img: "/img/pitture/pittura2.jpg", titolo: "Madonna col Bambino" },
   pittura3: { img: "/img/pitture/pittura3.jpg", titolo: "San Francesco" }
 };
@@ -25,6 +25,7 @@ function nascondiOpera() {
 window.onload = function() {
   imageMapResize();
 };
+
 
 
 
