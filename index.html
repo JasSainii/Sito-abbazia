@@ -2,47 +2,383 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Abbazia di Villanova</title>
-  <link rel="stylesheet" href="abbazia.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abbazia - Homepage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-.grid-links {
-  display: grid;                           
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  
-  gap: 30px;                               /* Spazio tra gli elementi della griglia */
-  max-width: 1000px;                       /* Limita la larghezza massima della griglia */
-  margin: 0 auto;                          /* Centra la griglia orizzontalmente */
-  justify-items: center;                   /* Centra ogni elemento dentro la sua cella */
-  align-items: stretch;                    /* Gli elementi si allungano per uniformare le altezze */
-  text-align: center;                      /* Testo centrato all’interno delle celle */
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.grid-links a {
-  background: #f5f2eb;                     /* Colore di sfondo dei box */
-  padding: 30px 20px;                      /* Spazio interno (verticale 30px, orizzontale 20px) */
-  border-radius: 10px;                     
-  font-size: 1.2em;                        
-  font-weight: bold;                       
-  color: #4b3a2f;                          
-  text-decoration: none;                   /* Rimuove la sottolineatura dei link */
-  transition: all 0.3s ease;               
-  width: 100%;                             /* Ogni box occupa tutta la larghezza disponibile */
-  max-width: 280px;                        /* Imposta una larghezza massima per la simmetria */
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08); /* Ombra leggera sotto i box */
+/* Corpo */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #fdfcf9;
+  color: #2c2c2c;
+  line-height: 1.6;
 }
 
-.grid-links a:hover {
-  background: #cbb994;                     /* Cambia sfondo al passaggio del mouse */
-  color: #fff;                            
-  transform: translateY(-5px);             
+/* Header */
+header {
+  background: #ece8dd;
+  border-bottom: 2px solid #cbb994;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+}
+header span a {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #6b4c3b;
+  font-family: 'Playfair Display', serif;
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+nav a {
+  text-decoration: none;
+  color: #4b3a2f;
+  background: #d8cfc1;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 600;
+  transition: 0.3s;
+}
+nav a:hover {
+  background: #b5a58e;
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  background: url('immagini/sfondo.png') center/cover no-repeat;
+  text-align: center;
+  padding: clamp(80px, 15vh, 200px) 20px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.35);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: auto;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  margin-bottom: 20px;
+  color: #f4f2f0;
+}
+.hero p {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Sezioni contenuto */
+.content {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+.content h2 {
+  font-size: 2.3em;
+  margin-bottom: 50px;
+  font-family: 'Playfair Display', serif;
+  color: #3b2a1f;
+}
+
+/* Grid cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-items: center;
+}
+.card {
+  background: #fdfcf9;
+  border: 1px solid #ece8dd;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+  min-height: 420px;
+}
+.card:hover { transform: translateY(-5px); }
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  margin: 15px 0 10px;
+  color: #4b3a2f;
+}
+.card p {
+  flex: 1;
+  font-size: 0.95em;
+  color: #333;
+  padding: 0 15px;
+}
+.card a {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 8px 14px;
+  background: #d8cfc1;
+  color: #4b3a2f;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.card a:hover { background: #b5a58e; color: #fff; }
+
+/* Box persone/prodotti */
+.team-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.box:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.image img {
+  max-width: 300px;
+  border-radius: 8px;
+}
+.text, .person-text {
+  flex: 1;
+  font-size: 1.1em;
+  color: #222;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 10px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: linear-gradient(to bottom, #cbb994, #d8cfc1);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.event {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+}
+.event.top { left: 0; text-align: right; }
+.event.bottom { left: 50%; text-align: left; }
+.card.timeline-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ece8dd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  display: inline-block;
+  max-width: 300px;
+}
+.card.timeline-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+.card.timeline-card p {
+  font-size: 0.9rem;
+}
+.dot {
+  position: absolute;
+  top: 30px;
+  width: 16px;
+  height: 16px;
+  background: #f8f5f0;
+  border: 4px solid #6b4c3b;
+  border-radius: 50%;
+  z-index: 2;
+}
+.event.top .dot { right: -10px; }
+.event.bottom .dot { left: -10px; }
+
+/* Tourbox */
+.tourbox {
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 100%;
+}
+.tourbox img {
+  width: 70%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Immagini responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  background: #ece8dd;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 2px solid #cbb994;
+}
+footer p { margin: 8px 0; }
+footer a {
+  color: #4b3a2f;
+  text-decoration: none;
+  margin: 0 10px;
+}
+footer a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  header { flex-direction: column; }
+  .box { flex-direction: column; text-align: center; }
+  .hero h1 { font-size: 2em; }
+  .timeline { width: 90%; padding-left: 20px; }
+  .event {
+    width: 100%;
+    left: 0;
+    text-align: left;
+    padding-left: 40px;
+    margin-bottom: 40px;
+  }
+  .dot { left: 0; top: 0; transform: translateX(-50%); }
+  .card { min-height: auto; }
+}
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  nav a {
+    width: 90%;
+    text-align: center;
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between; /* logo a sinistra, hamburger/nav a destra */
+  align-items: center;
+  padding: 12px 20px;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+}
+
+/* Hamburger (sempre a destra del logo) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1100;
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #4b3a2f;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Menu nascosto su mobile */
+@media (max-width: 768px) {
+  nav {
+    display: none; /* nascosto di default */
+    position: absolute;
+    top: 60px; /* sotto l’header */
+    right: 0;
+    width: 100%;
+    background: #ece8dd;
+    flex-direction: column;
+    border-top: 2px solid #cbb994;
+    padding: 15px 0;
+  }
+  nav a {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+  nav.active {
+    display: flex; /* quando clicco hamburger */
+  }
+  .hamburger {
+    display: flex;
+  }
 }
 
   </style>
 </head>
 <body>
-
   <!-- Header -->
   <header>
-    <span><a href="index.html">Abbazia di Villanova</a></span>
+    <span><a href="index.html">Abbazia di villanova</a></span>
+
+    <!-- Bottone hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav>
       <a href="storia.html">Storia</a>
       <a href="erboristeria.html">Erboristeria</a>
@@ -56,7 +392,7 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Benvenuti all'Abbazia di Villanova</h1>
+      <h1>Benvenuti all'Abbazia di villanova</h1>
       <p>Un luogo di storia, cultura e spiritualità immerso nella natura. Scopri la nostra erboristeria, i musei, i corsi e i tour guidati.</p>
     </div>
   </section>
@@ -66,37 +402,37 @@
     <h2>Esplora le nostre aree</h2>
     <div class="grid">
       <div class="card">
-        <img src="img/storia.jpg" alt="Storia">
+        <img src="immagini/erboristeria.png" alt="Storia">
         <h3>Storia</h3>
         <p>Scopri le radici antiche e i secoli di tradizione che rendono unica la nostra abbazia.</p>
         <a href="storia.html">Scopri di più</a>
       </div>
       <div class="card">
-        <img src="img/erboristeria.jpg" alt="Erboristeria">
+        <img src="immagini/erboristeria.png" alt="Erboristeria">
         <h3>Erboristeria</h3>
         <p>Un viaggio tra rimedi naturali, piante officinali e antiche conoscenze monastiche.</p>
         <a href="erboristeria.html">Scopri di più</a>
       </div>
       <div class="card">
-        <img src="img/musei.jpg" alt="Musei">
+        <img src="immagini/erboristeria.png" alt="Musei">
         <h3>Musei</h3>
         <p>Collezioni d’arte, reperti storici e testimonianze di fede custodite nei nostri musei.</p>
         <a href="musei.html">Scopri di più</a>
       </div>
       <div class="card">
-        <img src="img/chisiamo.jpg" alt="Chi siamo">
+        <img src="immagini/erboristeria.png" alt="Chi siamo">
         <h3>Chi Siamo</h3>
         <p>Conosci la comunità e i valori che animano la vita dell’abbazia ogni giorno.</p>
         <a href="chisiamo2.html">Scopri di più</a>
       </div>
       <div class="card">
-        <img src="img/corsi.jpg" alt="Corsi">
+        <img src="immagini/erboristeria.png" alt="Corsi">
         <h3>Corsi</h3>
         <p>Partecipa ai corsi di meditazione, arte, cucina e molto altro organizzati in abbazia.</p>
         <a href="corsi.html">Scopri di più</a>
       </div>
       <div class="card">
-        <img src="img/tour.jpg" alt="Tour">
+        <img src="immagini/erboristeria.png" alt="Tour">
         <h3>Tour</h3>
         <p>Vivi un’esperienza unica con le nostre visite guidate tra arte, natura e spiritualità.</p>
         <a href="tour.html">Scopri di più</a>
@@ -115,6 +451,10 @@
       <a href="tour.html">Tour</a>
     </p>
   </footer>
-
+  <script>
+    function toggleMenu() {
+      document.querySelector("nav").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
