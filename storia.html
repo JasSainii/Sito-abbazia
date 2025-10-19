@@ -1,122 +1,269 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abbazia di Villanova - Storia</title>
-  <link rel="stylesheet" href="abbazia.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <span><a href="index.html">Abbazia di Villanova</a></span>
-    <nav>
-      <a href="erboristeria.html">Erboristeria</a>
-      <a href="musei.html">Musei</a>
-      <a href="chisiamo2.html">Chi Siamo</a>
-      <a href="corsi.html">Corsi</a>
-      <a href="tour.html">Tour</a>
-    </nav>
-  </header>
-  
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Storia dell'Abbazia</h1>
-      <p>Un viaggio attraverso i secoli per scoprire l'evoluzione di un luogo sacro.</p>
-    </div>
-  </section>
+/* ================== RESET ================== */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
 
-  <section class="timeline-section">
-    <h2>La storia dell'abbazia di Villanova</h2>
-    <div class="timeline">
-      <div class="timeline-line"></div>
-      <div class="event-container">
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #fdfcf9;
+  color: #2c2c2c;
+  line-height: 1.6;
+}
 
-        <div class="event" style="top: 4%; left: 50%;">
-          <div class="card">
-            <h3>1117</h3>
-            <p>Terremoto. Probabilmente crolla parte della chiesa romanica costruita nell'XI secolo.</p>
-          </div>
-        </div>
+/* ================== HEADER ================== */
+header {
+  background: #ece8dd;
+  border-bottom: 2px solid #cbb994;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
 
-        <div class="event" style="top: 14%; left: 80%;">
-          <div class="card">
-            <h3>1136</h3>
-            <p>Papa Innocenzo II pone l'Abbazia sotto la protezione del monastero cluniacense di San Benedetto Polirone.</p>
-          </div>
-        </div>
+header span a {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #6b4c3b;
+  font-family: 'Playfair Display', serif;
+  text-decoration: none;
+}
 
-        <div class="event" style="top: 27%; left: 65%;">
-          <div class="card">
-            <h3>1149</h3>
-            <p>L'abate Uberto comincia la costruzione del campanile.</p>
-          </div>
-        </div>
+nav a {
+  text-decoration: none;
+  color: #4b3a2f;
+  background: #d8cfc1;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
 
-        <div class="event" style="top: 33.5%; left: 30%;">
-          <div class="card">
-            <h3>1420</h3>
-            <p>L'abate Nicola Anzeleri di Vicenza fa costruire la nuova sagrestia.</p>
-          </div>
-        </div>
+nav a:hover { 
+  background: #b5a58e; 
+  color: #fff; 
+}
 
-        <div class="event" style="top: 45%; left: 15%;">
-          <div class="card">
-            <h3>1562</h3>
-            <p>Il Concilio di Trento annulla le commende. L'Abbazia viene concessa alla congregazione degli Olivetani.</p>
-          </div>
-        </div>
+/* ================== HERO ================== */
+.hero {
+  background: url('img/abbazia.jpg') bottom/cover no-repeat;
+  background-position-y: 72%;
+  text-align: center;
+  padding: 150px 100px;
+  min-height: 80vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-        <div class="event" style="top: 51%; left: 56%;">
-          <div class="card">
-            <h3>1771</h3>
-            <p>Soppressione del monastero da parte della Repubblica Veneta.</p>
-          </div>
-        </div>
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #53290c;
+  -webkit-text-stroke: #000000 2px;
+}
 
-        <div class="event" style="top: 65%; left: 80%;">
-          <div class="card">
-            <h3>1796</h3>
-            <p>Battaglia d'Arcole. La chiesa viene usata dagli austriaci come ospedale da campo.</p>
-          </div>
-        </div>
+.hero p { 
+  font-size: 1.2em; 
+  max-width: 800px;
+  margin: 0 auto;
+  -webkit-text-stroke: #000000 1px;
+}
 
-        <div class="event" style="top: 70%; left: 46%;">
-          <div class="card">
-            <h3>1927</h3>
-            <p>La cripta, che era stata venduta nel 1772, viene riunita alla chiesa.</p>
-          </div>
-        </div>
+/* ================== CONTENUTO ================== */
+.content {
+  padding: 60px 20px;
+  background: #fff;
+}
 
-        <div class="event" style="top: 77%; left: 10%;">
-          <div class="card">
-            <h3>1949</h3>
-            <p>Papa Pio XII concede al parroco di Villanova di fregiarsi del titolo di abate.</p>
-          </div>
-        </div>
+.content h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+  color: #3b2a1f;
+}
 
-        <div class="event" style="top: 88%; left: 25%;">
-          <div class="card">
-            <h3>1990</h3>
-            <p>L'Abbazia si riappropria degli edifici monasteriali.</p>
-          </div>
-        </div>
+/* ================== STORIA.HTML ================== */
+.team-section { 
+  max-width: 1000px; 
+  margin: 0 auto; 
+}
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.box:nth-child(even) { 
+  flex-direction: row-reverse; 
+}
+.image img {
+  max-width: 300px;
+  border-radius: 8px;
+}
+.text, .person-text { 
+  flex: 1; 
+  font-size: 1.1em; 
+  color: #222; 
+}
 
-        <div class="event" style="top: 97%; left: 50%;">
-          <div class="card">
-            <h3>1994-2016</h3>
-            <p>Importanti lavori di restauro agli edifici monasteriali e al campanile.</p>
-          </div>
-        </div>
+/* Timeline con linea a S */
+.timeline-section {
+  text-align: center;
+}
+.timeline {
+  position: relative;
+  max-width: 1200px; /* linea a S */
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 2000px;
+}
 
-      </div>
-    </div>
-  </section>
+/* rimuovo la linea verticale vecchia */
+.timeline::before {
+  content: none;
+}
 
-</body>
+/* linea S */
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 2000" preserveAspectRatio="none"><path d="M 500 0 C 500 200 950 200 950 400 C 950 600 50 600 50 800 C 50 1000 950 1000 950 1200 C 950 1400 50 1400 50 1600 C 50 1800 500 1800 500 2000" fill="none" stroke="%23d8cfc1" stroke-width="4"/></svg>');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
 
-</html>
+/* Eventi */
+.event-container {
+  position: static;
+  height: auto;
+}
+
+.event {
+  position: absolute;
+  z-index: 1;
+  max-width: 300px;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ece8dd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #4b3a2f;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #2c2c2c;
+}
+
+/* Puntini */
+.dot {
+  position: absolute;
+  top: 30px;
+  width: 16px;
+  height: 16px;
+  background: #f8f5f0;
+  border: 4px solid #6b4c3b;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.event.top .dot {
+  right: -10px;
+}
+
+.event.bottom .dot {
+  left: -10px;
+}
+
+/* Footer */
+footer {
+  background: #ece8dd;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #cbb994;
+}
+
+/* ================== TOUR VIRTUALE ================== */
+.mappa-container {
+  position: relative;
+  max-width: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.mappa {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.preview {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 180px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 1000;
+}
+
+.preview img {
+  width: 100%;
+  display: block;
+}
+
+.preview p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  header { 
+    flex-direction: column; 
+  }
+  .box { 
+    flex-direction: column; 
+    text-align: center; 
+  }
+  .hero h1 { 
+    font-size: 2em; 
+  }
+  .timeline {
+    width: 100%;
+    padding: 20px 0;
+    min-height: auto;
+  }
+  .event {
+    position: static;
+    transform: none;
+    margin: 20px auto;
+  }
+  .timeline-line {
+    display: none;
+  }
+}
