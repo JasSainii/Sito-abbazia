@@ -6,13 +6,13 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background: #fdfcf9;
+  background: #F8F4EC;
   color: #2c2c2c;
   line-height: 1.6;
 }
 
 header {
-  background: #ece8dd;
+  background: #DAD2C2;
   border-bottom: 2px solid #cbb994;
   display: flex;
   justify-content: space-between;
@@ -52,7 +52,7 @@ nav a {
 }
 
 nav a:hover { 
-  background: #b5a58e; 
+  background: #758467; 
   color: #fff; 
 }
 
@@ -93,7 +93,7 @@ nav a:hover {
   font-size: 2em;
   margin-bottom: 40px;
   font-family: 'Playfair Display', serif;
-  color: #3b2a1f;
+  color: #C5A253;
 }
 
 .team-section { 
@@ -185,3 +185,4 @@ nav a:hover {
     display: none;
   }
 }
+
