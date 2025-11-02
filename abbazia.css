@@ -37,7 +37,7 @@ header span {
 header span a {
   font-size: 1.4em;
   font-weight: bold;
-  color: #6b4c3b;
+  color: #000;
   font-family: 'Playfair Display', serif;
   text-decoration: none;
 }
@@ -185,5 +185,6 @@ nav a:hover {
     display: none;
   }
 }
+
 
 
