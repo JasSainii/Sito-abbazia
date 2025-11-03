@@ -3,33 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abbazia di Villanova - Tour Virtuale</title>
+  <title>Tour Virtuale - Abbazia di Villanova</title>
   <link rel="stylesheet" href="abbazia.css">
 </head>
 <body>
 
-  <!-- Header -->
   <header>
-    <span>
-        <img src="img/logo.png" alt="Logo Abbazia" id="header-logo">
-        <a href="index.html">Abbazia di Villanova</a>
-    </span>
+    <span>Abbazia di Villanova</span>
     <nav>
-      <a href="storia.html">Storia</a>
-      <a href="erboristeria.html">Erboristeria</a>
-      <a href="musei.html">Musei</a>
-      <a href="chisiamo2.html">Chi Siamo</a>
-      <a href="corsi.html">Corsi</a>
+      <a href="chi siamo.html">chi siamo</a>
+      <a href="storia.html">storia</a>
+      <a href="Erboristeria.html">erboristeria</a>
+      <a href="Musei.html">musei</a>
+      <a href="corsi.html">corsi</a>
     </nav>
   </header>
-
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Tour Virtuale dell'Abbazia</h1>
-      <p>Scoprite le opere d'arte presenti all'interno dell'Abbazia visitandola da casa!</p>
-    </div>
-  </section>
 
   <main class="content">
     <h2>Tour Virtuale dell'Abbazia di Villanova</h2>
@@ -37,15 +25,43 @@
     <section class="tour">
       <h3>Pitture Murali</h3>
       <div class="mappa-container">
-        <!-- Mappa responsive con usemap -->
-        <img src="img/pitture.png" alt="Mappa Pitture" usemap="#mappaPitture" class="mappa">
+        <img src="img/pitture.png" usemap="#pitture" class="mappa" alt="Mappa Pitture">
 
-        <!-- Definizione map e aree -->
-       <map name="mappaPitture">
-          <area shape="circle" coords="1240,194,18" alt="Pittura 1" onmouseover="mostraOpera('pittura1')" onmouseout="nascondiOpera()">
-          <area shape="circle" coords="1400,300,18" alt="Pittura 2" onmouseover="mostraOpera('pittura2')" onmouseout="nascondiOpera()">
-          <area shape="circle" coords="1500,420,18" alt="Pittura 3" onmouseover="mostraOpera('pittura3')" onmouseout="nascondiOpera()">
-</map>
+        <map name="pitture">
+          <area shape="circle" coords="1239,197,13" onmouseover="mostraOpera('pittura1')"onmouseout="nascondiOpera()">
+          <area shape="circle" coords="300,250,18" onmouseover="mostraOpera('pittura2')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1353,284,16"  onmouseover="mostraOpera('pittura3')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="523,181,17"  onmouseover="mostraOpera('pittura4')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1136,288,16"  onmouseover="mostraOpera('pittura5')" onmouseout="nascondiOpera()">
+          <!-- aggiungi tutti gli altri numeri -->
+        </map>
+
+        <br>
+        <br>
+        <img src="img/quadri.png" usemap="#quadri" class="mappa" alt="Mappa Quadri">
+        <map name="quadri">
+          <area shape="circle" coords="1114,283,12"  onmouseover="mostraOpera('quadro1')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1024,279,15"  onmouseover="mostraOpera('quadro2')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="959,459,12"   onmouseover="mostraOpera('quadro3')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1383,150,12"  onmouseover="mostraOpera('quadro4')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1190,250,12"  onmouseover="mostraOpera('quadro5')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1400,300,12"  onmouseover="mostraOpera('quadro6')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1280,180,12"  onmouseover="mostraOpera('quadro7')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1350,220,12"  onmouseover="mostraOpera('quadro8')" onmouseout="nascondiOpera()">
+          <!-- aggiungi tutti gli altri numeri -->
+
+
+
+
+        </map>
+
+  <div class="preview"></div>
+</div>
+
+
+  <div class="preview"></div>
+</div>
+
 
         <!-- Anteprima -->
         <div id="preview" class="preview">
@@ -63,7 +79,3 @@
 
 </body>
 </html>
-
-
-
-
