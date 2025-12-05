@@ -254,6 +254,76 @@ nav a:hover {
     margin: 0 auto;
   }
 }
+/* EASTER EGG */
+#easter-egg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 9999;
+}
+
+#easter-egg.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#easter-img {
+  max-width: 60vw;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 255, 200, 0.8), 
+              0 0 80px rgba(0, 150, 255, 0.6);
+  animation: pulse 1.8s infinite alternate ease-in-out;
+}
+
+/* Effetto pulsazione */
+@keyframes pulse {
+  from {
+    transform: scale(0.95);
+    box-shadow: 0 0 30px rgba(0,255,200,0.5);
+  }
+  to {
+    transform: scale(1.05);
+    box-shadow: 0 0 60px rgba(0,255,255,1);
+  }
+}
+
+/* PARTICELLE */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: rise linear infinite;
+  filter: blur(2px);
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-300px) scale(0.2);
+    opacity: 0;
+  }
+}
+
 
 
 
