@@ -105,6 +105,61 @@
     </div>
 </footer>
 
+  <!-- EASTER EGG -->
+<div id="easter-egg">
+  <img id="easter-img" src="img/TUA_IMMAGINE.png" alt="Easter Egg">
+  <div class="particles"></div>
+</div>
+
+<script>
+// Sequenza dei tasti (Konami Code)
+const secretCode = [
+  "ArrowUp","ArrowUp","ArrowDown","ArrowDown",
+  "ArrowLeft","ArrowRight","ArrowLeft","ArrowRight",
+  "b","a"
+];
+
+let currentIndex = 0;
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === secretCode[currentIndex]) {
+    currentIndex++;
+    if (currentIndex === secretCode.length) {
+      triggerEasterEgg();
+      currentIndex = 0;
+    }
+  } else {
+    currentIndex = 0;
+  }
+});
+
+function triggerEasterEgg() {
+  const egg = document.getElementById("easter-egg");
+  egg.classList.add("show");
+
+  // Effetto particelle
+  createParticles();
+
+  // Nascondi dopo 5 secondi
+  setTimeout(() => {
+    egg.classList.remove("show");
+  }, 5000);
+}
+
+function createParticles() {
+  const container = document.querySelector(".particles");
+  container.innerHTML = "";
+  for (let i=0; i<40; i++) {
+    const p = document.createElement("span");
+    p.classList.add("particle");
+    p.style.left = Math.random() * 100 + "%";
+    p.style.animationDuration = 1 + Math.random() * 2 + "s";
+    container.appendChild(p);
+  }
+}
+</script>
+
+
   <!-- Libreria image-map-resizer -->
   <script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
   <!-- JS tour -->
@@ -112,4 +167,5 @@
 
 </body>
 </html>
+
 
