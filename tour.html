@@ -23,152 +23,139 @@
     <h2>Tour Virtuale dell'Abbazia di Villanova</h2>
 
     <section class="tour">
+
       <h3>Pitture Murali</h3>
+
       <div class="mappa-container">
+
+        <!-- MAPPA PITTURE -->
         <img src="img/pitture.png" usemap="#pitture" class="mappa" alt="Mappa Pitture">
 
         <map name="pitture">
-          <area shape="circle" coords="1239,197,13" onmouseover="mostraOpera('pittura1')"onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1239,197,13" onmouseover="mostraOpera('pittura1')" onmouseout="nascondiOpera()">
           <area shape="circle" coords="300,250,18" onmouseover="mostraOpera('pittura2')" onmouseout="nascondiOpera()">
-          <area shape="circle" coords="1353,284,16"  onmouseover="mostraOpera('pittura3')" onmouseout="nascondiOpera()">
-          <area shape="circle" coords="523,181,17"  onmouseover="mostraOpera('pittura4')" onmouseout="nascondiOpera()">
-          <area shape="circle" coords="1136,288,16"  onmouseover="mostraOpera('pittura5')" onmouseout="nascondiOpera()">
-          <!-- aggiungi tutti gli altri numeri -->
+          <area shape="circle" coords="1353,284,16" onmouseover="mostraOpera('pittura3')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="523,181,17" onmouseover="mostraOpera('pittura4')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1136,288,16" onmouseover="mostraOpera('pittura5')" onmouseout="nascondiOpera()">
         </map>
 
-        <br>
-        <br>
+        <br><br>
+
+        <!-- MAPPA QUADRI -->
         <img src="img/quadri.png" usemap="#quadri" class="mappa" alt="Mappa Quadri">
+
         <map name="quadri">
-          <area shape="circle" coords="1114,283,12"  onmouseover="mostraOpera('quadro1')" onmouseout="nascondiOpera()">
-          <area shape="circle" coords="1024,279,15"  onmouseover="mostraOpera('quadro2')" onmouseout="nascondiOpera()">
-          <area shape="circle" coords="959,459,12"   onmouseover="mostraOpera('quadro3')" onmouseout="nascondiOpera()">
-          <area shape="circle" coords="1383,150,12"  onmouseover="mostraOpera('quadro4')" onmouseout="nascondiOpera()">
-          <area shape="circle" coords="1190,250,12"  onmouseover="mostraOpera('quadro5')" onmouseout="nascondiOpera()">
-          <area shape="circle" coords="1400,300,12"  onmouseover="mostraOpera('quadro6')" onmouseout="nascondiOpera()">
-          <area shape="circle" coords="1280,180,12"  onmouseover="mostraOpera('quadro7')" onmouseout="nascondiOpera()">
-          <area shape="circle" coords="1350,220,12"  onmouseover="mostraOpera('quadro8')" onmouseout="nascondiOpera()">
-          <!-- aggiungi tutti gli altri numeri -->
-
-
-
-
+          <area shape="circle" coords="1114,283,12" onmouseover="mostraOpera('quadro1')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1024,279,15" onmouseover="mostraOpera('quadro2')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="959,459,12" onmouseover="mostraOpera('quadro3')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1383,150,12" onmouseover="mostraOpera('quadro4')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1190,250,12" onmouseover="mostraOpera('quadro5')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1400,300,12" onmouseover="mostraOpera('quadro6')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1280,180,12" onmouseover="mostraOpera('quadro7')" onmouseout="nascondiOpera()">
+          <area shape="circle" coords="1350,220,12" onmouseover="mostraOpera('quadro8')" onmouseout="nascondiOpera()">
         </map>
 
-  <div class="preview"></div>
-</div>
-
-
-  <div class="preview"></div>
-</div>
-
-
-        <!-- Anteprima -->
+        <!-- ANTEPRIMA -->
         <div id="preview" class="preview">
           <img src="" alt="">
           <p id="titolo"></p>
         </div>
-      </div>
+
+      </div> <!-- chiusura mappa-container -->
+
     </section>
   </main>
-<footer class="footer">
+
+  <footer class="footer">
     <div class="footer-container">
 
-        <div class="footer-section">
-            <h3>Abbazia di Villanova</h3>
-            <p>Un luogo di storia, spiritualità e natura nel cuore di San Bonifacio.</p>
-        </div>
+      <div class="footer-section">
+        <h3>Abbazia di Villanova</h3>
+        <p>Un luogo di storia, spiritualità e natura nel cuore di San Bonifacio.</p>
+      </div>
 
-        <div class="footer-section">
-            <h4>Navigazione</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="storia.html">Storia</a></li>
-                <li><a href="chi siamo.html">Chi siamo</a></li>
-                <li><a href="corsi.html">Corsi</a></li>
-                <li><a href="erboristeria.html">Erboristeria</a></li>
-                <li><a href="musei.html">Musei</a></li>
-                <li><a href="tour.html">Tour Virtuale</a></li>
-            </ul>
-        </div>
+      <div class="footer-section">
+        <h4>Navigazione</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="storia.html">Storia</a></li>
+          <li><a href="chi siamo.html">Chi siamo</a></li>
+          <li><a href="corsi.html">Corsi</a></li>
+          <li><a href="erboristeria.html">Erboristeria</a></li>
+          <li><a href="musei.html">Musei</a></li>
+          <li><a href="tour.html">Tour Virtuale</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-section">
-            <h4>Contatti</h4>
-            <p>Villanova - San Bonifacio (VR)</p>
-            <p>Email: <a href="mailto:info@abbazia-villanova.it">info@abbazia-villanova.it</a></p>
-        </div>
+      <div class="footer-section">
+        <h4>Contatti</h4>
+        <p>Villanova - San Bonifacio (VR)</p>
+        <p>Email: <a href="mailto:info@abbazia-villanova.it">info@abbazia-villanova.it</a></p>
+      </div>
 
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2025 Abbazia di Villanova di San Bonifacio – Tutti i diritti riservati</p>
+      <p>&copy; 2025 Abbazia di Villanova di San Bonifacio – Tutti i diritti riservati</p>
     </div>
-</footer>
+  </footer>
 
-<div id="chiesa">
-  <img id="easter-img" src="img/patrizio.png" alt="Easter Egg">
-  <div class="particles"></div>
-</div>
+  <div id="chiesa">
+    <img id="easter-img" src="img/patrizio.png" alt="Easter Egg">
+    <div class="particles"></div>
+  </div>
 
-<script>
-// Sequenza dei tasti (Konami Code)
-const secretCode = [
-  "ArrowUp","ArrowUp","ArrowDown","ArrowDown",
-  "ArrowLeft","ArrowRight","ArrowLeft","ArrowRight",
-  "b","a"
-];
+  <script>
+  // Sequenza dei tasti (Konami Code)
+  const secretCode = [
+    "ArrowUp","ArrowUp","ArrowDown","ArrowDown",
+    "ArrowLeft","ArrowRight","ArrowLeft","ArrowRight",
+    "b","a"
+  ];
 
-let currentIndex = 0;
+  let currentIndex = 0;
 
-document.addEventListener("keydown", function(event) {
-  if (event.key === secretCode[currentIndex]) {
-    currentIndex++;
-    if (currentIndex === secretCode.length) {
-      triggerEasterEgg();
+  document.addEventListener("keydown", function(event) {
+    if (event.key === secretCode[currentIndex]) {
+      currentIndex++;
+      if (currentIndex === secretCode.length) {
+        triggerEasterEgg();
+        currentIndex = 0;
+      }
+    } else {
       currentIndex = 0;
     }
-  } else {
-    currentIndex = 0;
+  });
+
+  function triggerEasterEgg() {
+    const egg = document.getElementById("chiesa");
+    egg.classList.add("show");
+
+    createParticles();
+
+    setTimeout(() => {
+      egg.classList.remove("show");
+    }, 5000);
   }
-});
 
-function triggerEasterEgg() {
-  const egg = document.getElementById("chiesa");
-  egg.classList.add("show");
-
-  // Effetto particelle
-  createParticles();
-
-  // Nascondi dopo 5 secondi
-  setTimeout(() => {
-    egg.classList.remove("show");
-  }, 5000);
-}
-
-function createParticles() {
-  const container = document.querySelector(".particles");
-  container.innerHTML = "";
-  for (let i=0; i<40; i++) {
-    const p = document.createElement("span");
-    p.classList.add("particle");
-    p.style.left = Math.random() * 100 + "%";
-    p.style.animationDuration = 1 + Math.random() * 2 + "s";
-    container.appendChild(p);
+  function createParticles() {
+    const container = document.querySelector(".particles");
+    container.innerHTML = "";
+    for (let i = 0; i < 40; i++) {
+      const p = document.createElement("span");
+      p.classList.add("particle");
+      p.style.left = Math.random() * 100 + "%";
+      p.style.animationDuration = 1 + Math.random() * 2 + "s";
+      container.appendChild(p);
+    }
   }
-}
-</script>
-
+  </script>
 
   <!-- Libreria image-map-resizer -->
   <script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+
   <!-- JS tour -->
   <script src="tour.js"></script>
 
 </body>
 </html>
-
-
-
-
-
-
