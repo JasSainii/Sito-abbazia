@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'EB Garamond', serif;
+  font-family: 'Spectral', serif;
   background: #F8F4EC;
   color: #2c2c2c;
   line-height: 1.6;
@@ -37,9 +37,9 @@ header span {
 
 header span a {
   font-size: 1.4em;
-  font-weight: bold;
+  font-weight: 700;
   color: #fff;
-  font-family: 'Cinzel Decorative', serif;
+  font-family: 'Playfair Display', serif;
   text-decoration: none;
 }
 
@@ -70,7 +70,8 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-family: 'Cinzel Decorative', serif;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
   font-size: 3em;
   margin-bottom: 20px;
   color: #53290c;
@@ -93,7 +94,8 @@ nav a:hover {
   text-align: center;
   font-size: 2em;
   margin-bottom: 40px;
-  font-family: 'Cormorant Unicase', serif;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
   color: #C5A253;
 }
 
@@ -198,7 +200,7 @@ nav a:hover {
   margin-top: 50px;
   padding: 40px 0 20px;
   border-top: 2px solid #cbb994;
-  font-family: 'EB Garamond', serif;
+  font-family: 'Spectral', serif;
 }
 
 .footer-container {
@@ -214,7 +216,8 @@ nav a:hover {
 
 .footer-section h3,
 .footer-section h4 {
-  font-family: 'Cormorant Unicase', serif;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
   color: #cbb994;
   margin-bottom: 15px;
 }
@@ -328,4 +331,3 @@ nav a:hover {
     opacity: 0;
   }
 }
-
