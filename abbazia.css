@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cormorant+Garamond:wght@600&family=Spectral:wght@400&display=swap');
+
 * { 
   margin: 0; 
   padding: 0; 
@@ -5,7 +7,7 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'EB Garamond', serif;
   background: #F8F4EC;
   color: #2c2c2c;
   line-height: 1.6;
@@ -27,7 +29,6 @@ header span {
 }
 
 #header-logo {
-  /* Meglio usare un'altezza fissa per il logo nell'header */
   height: 40px; 
   width: auto; 
   margin-right: 10px;
@@ -38,7 +39,7 @@ header span a {
   font-size: 1.4em;
   font-weight: bold;
   color: #fff;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cinzel Decorative', serif;
   text-decoration: none;
 }
 
@@ -69,7 +70,7 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cinzel Decorative', serif;
   font-size: 3em;
   margin-bottom: 20px;
   color: #53290c;
@@ -92,7 +93,7 @@ nav a:hover {
   text-align: center;
   font-size: 2em;
   margin-bottom: 40px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Unicase', serif;
   color: #C5A253;
 }
 
@@ -100,6 +101,7 @@ nav a:hover {
   max-width: 1000px; 
   margin: 0 auto; 
 }
+
 .box {
   display: flex;
   flex-wrap: wrap;
@@ -107,13 +109,16 @@ nav a:hover {
   align-items: center;
   margin-bottom: 40px;
 }
+
 .box:nth-child(even) { 
   flex-direction: row-reverse; 
 }
+
 .image img {
   max-width: 300px;
   border-radius: 8px;
 }
+
 .text, .person-text { 
   flex: 1; 
   font-size: 1.1em; 
@@ -193,7 +198,7 @@ nav a:hover {
   margin-top: 50px;
   padding: 40px 0 20px;
   border-top: 2px solid #cbb994;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'EB Garamond', serif;
 }
 
 .footer-container {
@@ -209,7 +214,7 @@ nav a:hover {
 
 .footer-section h3,
 .footer-section h4 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Unicase', serif;
   color: #cbb994;
   margin-bottom: 15px;
 }
@@ -254,6 +259,7 @@ nav a:hover {
     margin: 0 auto;
   }
 }
+
 /* EASTER EGG */
 #easter-egg {
   position: fixed;
@@ -279,7 +285,6 @@ nav a:hover {
   animation: pulse 1.8s infinite alternate ease-in-out;
 }
 
-/* Effetto pulsazione */
 @keyframes pulse {
   from {
     transform: scale(0.95);
@@ -323,9 +328,3 @@ nav a:hover {
     opacity: 0;
   }
 }
-
-
-
-
-
-
