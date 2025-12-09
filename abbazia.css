@@ -261,7 +261,7 @@ nav a:hover {
 }
 
 /* EASTER EGG */
-#easter-egg {
+#chiesa {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -272,7 +272,7 @@ nav a:hover {
   z-index: 9999;
 }
 
-#easter-egg.show {
+#chiesa.show {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
 }
@@ -328,3 +328,4 @@ nav a:hover {
     opacity: 0;
   }
 }
+
