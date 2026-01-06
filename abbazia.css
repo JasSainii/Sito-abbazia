@@ -73,17 +73,17 @@ nav a:hover {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 4em;
-  margin-bottom: 200px;
-  margin-left: 50px;
+  margin-bottom: 10px;
   color: #bf5b16;
   -webkit-text-stroke: #000000 1px;
 }
 
 .hero p { 
-  font-size: 1.2em; 
+  font-size: 1.8em; 
   max-width: 800px;
   margin: 0 auto;
-  -webkit-text-stroke: #000000 1px;
+  margin-bottom: 230px;
+  -webkit-text-stroke: #bf5b16 1px;
 }
 
 .content {
@@ -332,4 +332,5 @@ nav a:hover {
     opacity: 0;
   }
 }
+
 
