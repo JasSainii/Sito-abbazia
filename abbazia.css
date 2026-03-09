@@ -60,33 +60,26 @@ nav a:hover {
 .hero {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;   
-  justify-content: flex-start; 
+  align-items: flex-start; 
+  justify-content: flex-start;
   text-align: left;
-  
-  
-  padding-top: 100px;  
-  padding-left: 80px;  
-  
- 
-  min-height: 100vh;  
-  width: 100%;
+  padding: 50px; 
 }
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 4em;
-  margin: 0;           
+  margin-bottom: 10px;
   color: #bf5b16;
   -webkit-text-stroke: #000000 1px;
+  margin-left: 0; 
 }
 
 .hero p { 
   font-size: 1.8em; 
   max-width: 800px;
-  margin-top: 20px;    
-  margin-bottom: 0;
+  margin: 0 0 230px 0; 
   -webkit-text-stroke: #bf5b16 1px;
 }
 
@@ -336,6 +329,7 @@ nav a:hover {
     opacity: 0;
   }
 }
+
 
 
 
