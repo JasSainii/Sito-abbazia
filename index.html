@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abbazia - Homepage</title>
+  <link rel="stylesheet" href="abbazia.css">
+  <style>
+    /* Hero specifico per index */
+    .hero {
+      background: url('immagini/sfondo.png') center/cover no-repeat;
+      text-align: center;
+      padding: clamp(5rem, 15vh, 12.5rem) 1.25rem;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 56.25rem;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 3.2rem);
+      margin-bottom: 1.25rem;
+      color: #f4f2f0;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      max-width: 50rem;
+      margin: 0 auto;
+    }
+
+    /* Grid cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+      gap: 2.5rem;
+      max-width: 68.75rem;
+      margin: 0 auto;
+      justify-items: center;
+    }
+
+    .card {
+      background: #fdfcf9;
+      border: 0.0625rem solid #ece8dd;
+      border-radius: 0.75rem;
+      box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      max-width: 20rem;
+      min-height: 26.25rem;
+    }
+
+    .card:hover {
+      transform: translateY(-0.3125rem);
+    }
+
+    .card img {
+      width: 100%;
+      height: 11.25rem;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-family: 'Playfair Display', serif;
+      margin: 0.9375rem 0 0.625rem;
+      color: #4b3a2f;
+    }
+
+    .card p {
+      flex: 1;
+      font-size: 0.95rem;
+      color: #333;
+      padding: 0 0.9375rem;
+    }
+
+    .card a {
+      display: inline-block;
+      margin: 1.25rem auto;
+      padding: 0.5rem 0.875rem;
+      background: #d8cfc1;
+      color: #4b3a2f;
+      border-radius: 0.3125rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .card a:hover {
+      background: #b5a58e;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <span>
+      <img src="img/logo.png" alt="Logo Abbazia" id="header-logo">
+      <a href="index.html">Abbazia di Villanova</a>
+    </span>
+    <nav>
+      <a href="storia.html">Storia</a>
+      <a href="musei.html">Musei</a>
+      <a href="chisiamo2.html">Chi Sono (v1)</a>
+      <a href="chisiamo.html">Chi Siamo (v2)</a>
+      <a href="corsi.html">Corsi</a>
+      <a href="tour.html">Tour</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Benvenuti all'Abbazia di villanova</h1>
+      <p>Un luogo di storia, cultura e spiritualità immerso nella natura. Scopri la nostra erboristeria, i musei, i
+        corsi e i tour guidati.</p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="content">
+    <h2>Esplora le nostre aree</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="immagini/erboristeria.png" alt="Storia">
+        <h3>Storia</h3>
+        <p>Scopri le radici antiche e i secoli di tradizione che rendono unica la nostra abbazia.</p>
+        <a href="storia.html">Scopri di più</a>
+      </div>
+      <div class="card">
+        <img src="immagini/erboristeria.png" alt="Musei">
+        <h3>Musei</h3>
+        <p>Collezioni d’arte, reperti storici e testimonianze di fede custodite nei nostri musei.</p>
+        <a href="musei.html">Scopri di più</a>
+      </div>
+      <div class="card">
+        <img src="immagini/erboristeria.png" alt="Chi siamo">
+        <h3>Chi Siamo</h3>
+        <p>Conosci la comunità e i valori che animano la vita dell’abbazia ogni giorno.</p>
+        <a href="chisiamo2.html">Scopri di più</a>
+      </div>
+      <div class="card">
+        <img src="immagini/erboristeria.png" alt="Corsi">
+        <h3>Corsi</h3>
+        <p>Partecipa ai corsi di meditazione, arte, cucina e molto altro organizzati in abbazia.</p>
+        <a href="corsi.html">Scopri di più</a>
+      </div>
+      <div class="card">
+        <img src="immagini/erboristeria.png" alt="Tour">
+        <h3>Tour</h3>
+        <p>Vivi un’esperienza unica con le nostre visite guidate tra arte, natura e spiritualità.</p>
+        <a href="tour.html">Scopri di più</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Abbazia di Villanova</h3>
+        <p>Un luogo di storia, spiritualità e natura nel cuore di San Bonifacio.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Navigazione</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="storia.html">Storia</a></li>
+          <li><a href="chi siamo.html">Chi siamo</a></li>
+          <li><a href="corsi.html">Corsi</a></li>
+          <li><a href="musei.html">Musei</a></li>
+          <li><a href="tour.html">Tour Virtuale</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contatti</h4>
+        <p>Villanova - San Bonifacio (VR)</p>
+        <p>Email: <a href="mailto:info@abbazia-villanova.it">info@abbazia-villanova.it</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Abbazia di Villanova di San Bonifacio – Tutti i diritti riservati</p>
+    </div>
+  </footer>
+</body>
+
+</html>
