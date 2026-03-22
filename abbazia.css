@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cormorant+Garamond:wght@600&family=Spectral:wght@400&display=swap');
 
-* { 
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -15,11 +15,11 @@ body {
 
 header {
   background: #2e5d4b;
-  border-bottom: 2px solid #cbb994;
+  border-bottom: 0.125rem solid #cbb994;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 0.9375rem 1.875rem;
 }
 
 /* REGOLE LOGO INIZIO */
@@ -29,14 +29,15 @@ header span {
 }
 
 #header-logo {
-  height: 40px; 
-  width: auto; 
-  margin-right: 10px;
+  height: 2.5rem;
+  width: auto;
+  margin-right: 0.625rem;
 }
+
 /* REGOLE LOGO FINE */
 
 header span a {
-  font-size: 1.4em;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #fff;
   font-family: 'Playfair Display', serif;
@@ -47,21 +48,21 @@ nav a {
   text-decoration: none;
   color: #202b26;
   background: #7fbcab;
-  padding: 6px 12px;
-  margin-left: 10px;
-  border-radius: 5px;
+  padding: 0.375rem 0.75rem;
+  margin-left: 0.625rem;
+  border-radius: 0.3125rem;
 }
 
-nav a:hover { 
-  background: #c9a227; 
-  color: #202b26; 
+nav a:hover {
+  background: #c9a227;
+  color: #202b26;
 }
 
 .hero {
   background: url('img/abbazia.jpg') bottom/cover no-repeat;
   background-position-y: 72%;
   text-align: center;
-  padding: 150px 100px;
+  padding: 9.375rem 6.25rem;
   min-height: 80vh;
   color: #bf5b16;
   display: flex;
@@ -72,67 +73,68 @@ nav a:hover {
 .hero h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 4em;
-  margin-bottom: 10px;
+  font-size: 4rem;
+  margin-bottom: 0.625rem;
   color: #bf5b16;
-  -webkit-text-stroke: #000000 1px;
+  -webkit-text-stroke: #000000 0.0625rem;
 }
 
-.hero p { 
-  font-size: 1.8em; 
-  max-width: 800px;
+.hero p {
+  font-size: 1.8rem;
+  max-width: 50rem;
   margin: 0 auto;
-  margin-bottom: 230px;
-  -webkit-text-stroke: #bf5b16 1px;
+  margin-bottom: 14.375rem;
+  -webkit-text-stroke: #bf5b16 0.0625rem;
 }
 
 .content {
-  padding: 60px 20px;
+  padding: 3.75rem 1.25rem;
   background: #fff;
 }
 
 .content h2 {
   text-align: center;
-  font-size: 2em;
-  margin-bottom: 40px;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
   color: #C5A253;
 }
 
-.team-section { 
-  max-width: 1000px; 
-  margin: 0 auto; 
+.team-section {
+  max-width: 62.5rem;
+  margin: 0 auto;
 }
 
 .box {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 1.875rem;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
-.box:nth-child(even) { 
-  flex-direction: row-reverse; 
+.box:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .image img {
-  max-width: 300px;
-  border-radius: 8px;
+  max-width: 18.75rem;
+  border-radius: 0.5rem;
 }
 
-.text, .person-text { 
-  flex: 1; 
-  font-size: 1.1em; 
-  color: #222; 
+.text,
+.person-text {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #222;
 }
 
 /* ================== TOUR VIRTUALE ================== */
 .mappa-container {
   position: relative;
   max-width: 100%;
-  margin: 20px auto;
+  margin: 1.25rem auto;
   overflow: hidden;
 }
 
@@ -140,19 +142,19 @@ nav a:hover {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 .preview {
   display: none;
   position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 180px;
+  top: 0.625rem;
+  left: 0.625rem;
+  width: 11.25rem;
   background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 5px;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.3125rem;
+  padding: 0.3125rem;
   z-index: 1000;
 }
 
@@ -162,33 +164,39 @@ nav a:hover {
 }
 
 .preview p {
-  margin: 5px 0 0 0;
-  font-size: 14px;
+  margin: 0.3125rem 0 0 0;
+  font-size: 0.875rem;
   text-align: center;
 }
 
 /* ================== RESPONSIVE ================== */
-@media (max-width: 768px) {
-  header { 
-    flex-direction: column; 
+@media (max-width: 48rem) {
+  header {
+    flex-direction: column;
   }
-  .box { 
-    flex-direction: column; 
-    text-align: center; 
+
+  .box,
+  .box:nth-child(even) {
+    flex-direction: column;
+    text-align: center;
   }
-  .hero h1 { 
-    font-size: 2em; 
+
+  .hero h1 {
+    font-size: 2rem;
   }
+
   .timeline {
     width: 100%;
-    padding: 20px 0;
+    padding: 1.25rem 0;
     min-height: auto;
   }
+
   .event {
     position: static;
     transform: none;
-    margin: 20px auto;
+    margin: 1.25rem auto;
   }
+
   .timeline-line {
     display: none;
   }
@@ -198,21 +206,21 @@ nav a:hover {
 .footer {
   background: #2e5d4b;
   color: #fff;
-  margin-top: 50px;
-  padding: 40px 0 20px;
-  border-top: 2px solid #cbb994;
+  margin-top: 3.125rem;
+  padding: 2.5rem 0 1.25rem;
+  border-top: 0.125rem solid #cbb994;
   font-family: 'Spectral', serif;
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 1.875rem;
 }
 
 .footer-section h3,
@@ -220,11 +228,11 @@ nav a:hover {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
   color: #cbb994;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 
 .footer-section p {
-  max-width: 250px;
+  max-width: 15.625rem;
   line-height: 1.4;
 }
 
@@ -233,7 +241,7 @@ nav a:hover {
 }
 
 .footer-section ul li {
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .footer-section a {
@@ -247,18 +255,19 @@ nav a:hover {
 
 .footer-bottom {
   text-align: center;
-  margin-top: 30px;
-  border-top: 1px solid rgba(255,255,255,0.2);
-  padding-top: 15px;
+  margin-top: 1.875rem;
+  border-top: 0.0625rem solid rgba(255, 255, 255, 0.2);
+  padding-top: 0.9375rem;
   color: #e6e6e6;
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 
 /* Responsive footer */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .footer-container {
     text-align: center;
   }
+
   .footer-section p {
     margin: 0 auto;
   }
@@ -283,20 +292,21 @@ nav a:hover {
 
 #easter-img {
   max-width: 60vw;
-  border-radius: 20px;
-  box-shadow: 0 0 40px rgba(0, 255, 200, 0.8), 
-              0 0 80px rgba(0, 150, 255, 0.6);
+  border-radius: 1.25rem;
+  box-shadow: 0 0 2.5rem rgba(0, 255, 200, 0.8),
+    0 0 5rem rgba(0, 150, 255, 0.6);
   animation: pulse 1.8s infinite alternate ease-in-out;
 }
 
 @keyframes pulse {
   from {
     transform: scale(0.95);
-    box-shadow: 0 0 30px rgba(0,255,200,0.5);
+    box-shadow: 0 0 1.875rem rgba(0, 255, 200, 0.5);
   }
+
   to {
     transform: scale(1.05);
-    box-shadow: 0 0 60px rgba(0,255,255,1);
+    box-shadow: 0 0 3.75rem rgba(0, 255, 255, 1);
   }
 }
 
@@ -314,12 +324,12 @@ nav a:hover {
 .particle {
   position: absolute;
   bottom: 0;
-  width: 8px;
-  height: 8px;
+  width: 0.5rem;
+  height: 0.5rem;
   background: rgba(0, 255, 255, 0.8);
   border-radius: 50%;
   animation: rise linear infinite;
-  filter: blur(2px);
+  filter: blur(0.125rem);
 }
 
 @keyframes rise {
@@ -327,10 +337,9 @@ nav a:hover {
     transform: translateY(0) scale(1);
     opacity: 1;
   }
+
   to {
-    transform: translateY(-300px) scale(0.2);
+    transform: translateY(-18.75rem) scale(0.2);
     opacity: 0;
   }
 }
-
-
