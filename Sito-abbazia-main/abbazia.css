@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cormorant+Garamond:wght@600&family=Spectral:wght@400&display=swap');
+
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: 'Spectral', serif;
+  background: #F8F4EC;
+  color: #2c2c2c;
+  line-height: 1.6;
+}
+
+header {
+  background: #2e5d4b;
+  border-bottom: 2px solid #cbb994;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+/* REGOLE LOGO INIZIO */
+header span {
+  display: flex;
+  align-items: center;
+}
+
+#header-logo {
+  height: 40px; 
+  width: auto; 
+  margin-right: 10px;
+}
+/* REGOLE LOGO FINE */
+
+header span a {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  text-decoration: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #202b26;
+  background: #7fbcab;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+nav a:hover { 
+  background: #c9a227; 
+  color: #202b26; 
+}
+
+.hero {
+  background: url('img/abbazia.jpg') bottom/cover no-repeat;
+  background-position-y: 72%;
+  text-align: center;
+  padding: 150px 100px;
+  min-height: 80vh;
+  color: #bf5b16;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 4em;
+  margin-bottom: 10px;
+  color: #bf5b16;
+  -webkit-text-stroke: #000000 1px;
+}
+
+.hero p { 
+  font-size: 1.8em; 
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 230px;
+  -webkit-text-stroke: #bf5b16 1px;
+}
+
+.content {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.content h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: #C5A253;
+}
+
+.team-section { 
+  max-width: 1000px; 
+  margin: 0 auto; 
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.box:nth-child(even) { 
+  flex-direction: row-reverse; 
+}
+
+.image img {
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.text, .person-text { 
+  flex: 1; 
+  font-size: 1.1em; 
+  color: #222; 
+}
+
+/* ================== TOUR VIRTUALE ================== */
+.mappa-container {
+  position: relative;
+  max-width: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.mappa {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.preview {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 180px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 1000;
+}
+
+.preview img {
+  width: 100%;
+  display: block;
+}
+
+.preview p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  header { 
+    flex-direction: column; 
+  }
+  .box { 
+    flex-direction: column; 
+    text-align: center; 
+  }
+  .hero h1 { 
+    font-size: 2em; 
+  }
+  .timeline {
+    width: 100%;
+    padding: 20px 0;
+    min-height: auto;
+  }
+  .event {
+    position: static;
+    transform: none;
+    margin: 20px auto;
+  }
+  .timeline-line {
+    display: none;
+  }
+}
+
+/* ================== FOOTER ================== */
+.footer {
+  background: #2e5d4b;
+  color: #fff;
+  margin-top: 50px;
+  padding: 40px 0 20px;
+  border-top: 2px solid #cbb994;
+  font-family: 'Spectral', serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: #cbb994;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  max-width: 250px;
+  line-height: 1.4;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #c9a227;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 15px;
+  color: #e6e6e6;
+  font-size: 0.9em;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+  .footer-container {
+    text-align: center;
+  }
+  .footer-section p {
+    margin: 0 auto;
+  }
+}
+
+/* EASTER EGG */
+#chiesa {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 9999;
+}
+
+#chiesa.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#easter-img {
+  max-width: 60vw;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 255, 200, 0.8), 
+              0 0 80px rgba(0, 150, 255, 0.6);
+  animation: pulse 1.8s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.95);
+    box-shadow: 0 0 30px rgba(0,255,200,0.5);
+  }
+  to {
+    transform: scale(1.05);
+    box-shadow: 0 0 60px rgba(0,255,255,1);
+  }
+}
+
+/* PARTICELLE */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: rise linear infinite;
+  filter: blur(2px);
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-300px) scale(0.2);
+    opacity: 0;
+  }
+}
+
+
