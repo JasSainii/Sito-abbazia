@@ -2,22 +2,22 @@ import React, { useState, useEffect } from 'react';
 import imageMapResizer from 'image-map-resizer';
 
 const opereData: Record<string, { titolo: string; img: string }> = {
-  p1: { titolo: "Affresco Abside", img: "/img/pitture/pitture1.jpg" },
-  p2: { titolo: "San Benedetto", img: "/img/pitture/pitture2.jpg" },
-  p3: { titolo: "Il Miracolo", img: "/img/pitture/pitture3.jpg" },
-  p4: { titolo: "Navata Centrale", img: "/img/pitture/pitture4.jpg" },
-  p5: { titolo: "La Crocifissione", img: "/img/pitture/pitture5.jpg" },
-  p6: { titolo: "Annunciazione", img: "/img/pitture/pitture6.jpg" },
-  p7: { titolo: "Ultima Cena", img: "/img/pitture/pitture7.jpg" },
-  p8: { titolo: "Dettaglio Volte", img: "/img/pitture/pitture8.jpg" },
-  p9: { titolo: "Pittura 9", img: "/img/pitture/pitture9.jpg" },
-  p10: { titolo: "Pittura 10", img: "/img/pitture/pitture10.jpg" },
-  p11: { titolo: "Pittura 11", img: "/img/pitture/pitture11.jpg" },
-  p12: { titolo: "Pittura 12", img: "/img/pitture/pitture12.jpg" },
-  p13: { titolo: "Pittura 13", img: "/img/pitture/pitture13.jpg" },
-  p14: { titolo: "Pittura 14", img: "/img/pitture/pitture14.jpg" },
-  q1: { titolo: "Quadro Antico 1", img: "/img/quadri/quadro1.jpg" },
-  q2: { titolo: "Quadro Antico 2", img: "/img/quadri/quadro2.jpg" },
+  p1: { titolo: "Affresco Abside", img: "img/pitture/pitture1.jpg" },
+  p2: { titolo: "San Benedetto", img: "img/pitture/pitture2.jpg" },
+  p3: { titolo: "Il Miracolo", img: "img/pitture/pitture3.jpg" },
+  p4: { titolo: "Navata Centrale", img: "img/pitture/pitture4.jpg" },
+  p5: { titolo: "La Crocifissione", img: "img/pitture/pitture5.jpg" },
+  p6: { titolo: "Annunciazione", img: "img/pitture/pitture6.jpg" },
+  p7: { titolo: "Ultima Cena", img: "img/pitture/pitture7.jpg" },
+  p8: { titolo: "Dettaglio Volte", img: "img/pitture/pitture8.jpg" },
+  p9: { titolo: "Pittura 9", img: "img/pitture/pitture9.jpg" },
+  p10: { titolo: "Pittura 10", img: "img/pitture/pitture10.jpg" },
+  p11: { titolo: "Pittura 11", img: "img/pitture/pitture11.jpg" },
+  p12: { titolo: "Pittura 12", img: "img/pitture/pitture12.jpg" },
+  p13: { titolo: "Pittura 13", img: "img/pitture/pitture13.jpg" },
+  p14: { titolo: "Pittura 14", img: "img/pitture/pitture14.jpg" },
+  q1: { titolo: "Quadro Antico 1", img: "img/quadri/quadro1.jpg" },
+  q2: { titolo: "Quadro Antico 2", img: "img/quadri/quadro2.jpg" },
 };
 
 const TourVirtuale: React.FC = () => {
