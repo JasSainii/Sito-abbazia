@@ -1,11 +1,21 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { resolve } from 'path'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './', // Questo permette alle immagini e ai file di trovarsi anche su GitHub
+  base: './', 
   build: {
-    outDir: 'dist',
-  }
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        tour: resolve(__dirname, 'tour.html'),
+        storia: resolve(__dirname, 'storia.html'),
+        musei: resolve(__dirname, 'musei.html'),
+        chisiamo: resolve(__dirname, 'chisiamo.html'),
+        chisiamo2: resolve(__dirname, 'chisiamo2.html'),
+        corsi: resolve(__dirname, 'corsi.html'),
+      },
+    },
+  },
 })
