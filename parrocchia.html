@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abbazia di Villanova - Foglietto Parrocchiale</title>
+  <link rel="stylesheet" href="abbazia.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cormorant+Garamond:wght@600&family=Spectral:wght@400&display=swap" rel="stylesheet">
+  <style>
+    .hero {
+      min-height: 55vh;
+      padding-top: 120px;
+      padding-left: 80px;
+      background-image: url('abbazia.jpg');
+    }
+
+    .intro-strip {
+      background: #2e5d4b;
+      color: #f8f4ec;
+      text-align: center;
+      padding: 36px 30px;
+      border-bottom: 2px solid #cbb994;
+    }
+    .intro-strip p {
+      font-family: 'Spectral', serif;
+      font-size: 1.15em;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .parrocchia-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px 80px;
+    }
+
+    .latest-section { margin-bottom: 60px; }
+    .latest-section h2,
+    .archive-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.9em;
+      color: #C5A253;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .latest-card {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      background: #fff;
+      border: 1px solid #e2d9c8;
+      border-radius: 12px;
+      padding: 36px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+      position: relative;
+    }
+    .badge-new {
+      position: absolute;
+      top: -14px;
+      left: 36px;
+      background: #c9a227;
+      color: #fff;
+      font-family: 'Spectral', serif;
+      font-size: 0.78em;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+    }
+    .pdf-thumb {
+      flex-shrink: 0;
+      width: 160px;
+      height: 210px;
+      background: #f0ebe0;
+      border: 2px solid #cbb994;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #6b4c3b;
+    }
+    .pdf-thumb svg { width: 48px; height: 48px; opacity: 0.7; }
+    .pdf-thumb span {
+      font-family: 'Spectral', serif;
+      font-size: 0.82em;
+      color: #6b4c3b;
+      text-align: center;
+      padding: 0 10px;
+    }
+    .latest-info { flex: 1; }
+    .latest-info .issue-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4em;
+      font-weight: 600;
+      color: #2e5d4b;
+      margin-bottom: 6px;
+    }
+    .latest-info .issue-date {
+      font-size: 0.92em;
+      color: #888;
+      margin-bottom: 18px;
+      font-style: italic;
+    }
+    .latest-info .issue-summary {
+      font-size: 1em;
+      color: #333;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #2e5d4b;
+      color: #f8f4ec;
+      font-family: 'Spectral', serif;
+      font-size: 0.97em;
+      padding: 11px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s;
+    }
+    .btn-download:hover { background: #c9a227; color: #202b26; }
+    .btn-download svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    .ornament {
+      text-align: center;
+      margin: 50px 0 44px;
+      color: #cbb994;
+      font-size: 1.4em;
+      letter-spacing: 0.3em;
+    }
+
+    .year-filters {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .year-btn {
+      background: #f0ebe0;
+      border: 1px solid #cbb994;
+      color: #4b3a2f;
+      font-family: 'Spectral', serif;
+      font-size: 0.95em;
+      padding: 7px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .year-btn.active, .year-btn:hover {
+      background: #2e5d4b;
+      color: #fff;
+      border-color: #2e5d4b;
+    }
+
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 24px;
+    }
+    .archive-item {
+      background: #fff;
+      border: 1px solid #e2d9c8;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    .archive-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .archive-thumb {
+      height: 130px;
+      background: #f0ebe0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #e2d9c8;
+    }
+    .archive-thumb svg { width: 40px; height: 40px; opacity: 0.5; color: #6b4c3b; }
+    .archive-meta { padding: 14px 16px; }
+    .archive-meta .arch-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.05em;
+      color: #2e5d4b;
+      margin-bottom: 4px;
+    }
+    .archive-meta .arch-date { font-size: 0.82em; color: #999; font-style: italic; }
+
+    .newsletter-strip {
+      background: #f0ebe0;
+      border: 1px solid #e2d9c8;
+      border-radius: 12px;
+      padding: 40px 36px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .newsletter-strip h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7em;
+      color: #2e5d4b;
+      margin-bottom: 10px;
+    }
+    .newsletter-strip p { font-size: 0.98em; color: #555; margin-bottom: 22px; }
+    .newsletter-form {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .newsletter-form input[type="email"] {
+      padding: 11px 18px;
+      border: 1px solid #cbb994;
+      border-radius: 6px;
+      font-family: 'Spectral', serif;
+      font-size: 0.97em;
+      width: 280px;
+      background: #fff;
+      outline: none;
+    }
+    .newsletter-form input[type="email"]:focus { border-color: #2e5d4b; }
+    .newsletter-form button {
+      padding: 11px 24px;
+      background: #2e5d4b;
+      color: #f8f4ec;
+      border: none;
+      border-radius: 6px;
+      font-family: 'Spectral', serif;
+      font-size: 0.97em;
+      cursor: pointer;
+      transition: background 0.25s;
+    }
+    .newsletter-form button:hover { background: #c9a227; color: #202b26; }
+
+    .archive-item.hidden { display: none; }
+
+    @media (max-width: 768px) {
+      .latest-card { flex-direction: column; align-items: center; text-align: center; }
+      .hero { padding-left: 20px; padding-top: 100px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span>
+      <img src="img/logo.png" alt="Logo Abbazia" id="header-logo">
+      <a href="index.html">Abbazia di Villanova</a>
+    </span>
+    <nav>
+      <a href="musei.html">Musei</a>
+      <a href="chisiamo2.html">Chi Siamo</a>
+      <a href="corsi.html">Corsi</a>
+      <a href="tour.html">Tour</a>
+      <a href="parrocchia.html">Parrocchia</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Foglietto Parrocchiale</h1>
+    <p>Notizie, riflessioni e appuntamenti della comunità di Villanova.</p>
+  </section>
+
+  <div class="intro-strip">
+    <p>Ogni settimana la voce della nostra comunità: avvisi liturgici, attività pastorali e momenti di riflessione condivisa. Scarica il foglietto o ricevilo direttamente via email.</p>
+  </div>
+
+  <div class="content" style="background:#F8F4EC; padding: 60px 20px 0;">
+    <div class="parrocchia-container" style="padding-top:0;">
+
+      <!-- ULTIMO NUMERO -->
+      <div class="latest-section">
+        <h2>Ultimo numero</h2>
+        <div class="latest-card">
+          <span class="badge-new">Nuovo</span>
+          <div class="pdf-thumb">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            <span>Foglietto<br>n° 12 · 2025</span>
+          </div>
+          <div class="latest-info">
+            <div class="issue-label">Domenica 23 marzo 2025</div>
+            <div class="issue-date">V Domenica di Quaresima · Anno B</div>
+            <div class="issue-summary">
+              In questo numero: orari delle celebrazioni della Settimana Santa, avviso per le confessioni pasquali,
+              invito alla Via Crucis del venerdì sera e aggiornamenti sulle attività del gruppo giovani.
+              Il parroco riflette sul brano del Vangelo di Giovanni: <em>"Se il chicco di grano non muore..."</em>
+            </div>
+            <a href="#" class="btn-download" onclick="return false;">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+              </svg>
+              Scarica PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+      <!-- ARCHIVIO -->
+      <div class="archive-section">
+        <h2>Archivio</h2>
+        <div class="year-filters">
+          <button class="year-btn active" onclick="filterYear('all', this)">Tutti</button>
+          <button class="year-btn" onclick="filterYear('2025', this)">2025</button>
+          <button class="year-btn" onclick="filterYear('2024', this)">2024</button>
+          <button class="year-btn" onclick="filterYear('2023', this)">2023</button>
+        </div>
+        <div class="archive-grid" id="archiveGrid">
+
+          <!-- Icona SVG riutilizzabile come template inline -->
+          <div class="archive-item" data-year="2025"><div class="archive-thumb"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><div class="archive-meta"><div class="arch-title">N° 11 · 2025</div><div class="arch-date">16 marzo 2025</div></div></div>
+
+          <div class="archive-item" data-year="2025"><div class="archive-thumb"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><div class="archive-meta"><div class="arch-title">N° 10 · 2025</div><div class="arch-date">9 marzo 2025</div></div></div>
+
+          <div class="archive-item" data-year="2025"><div class="archive-thumb"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><div class="archive-meta"><div class="arch-title">N° 9 · 2025</div><div class="arch-date">2 marzo 2025</div></div></div>
+
+          <div class="archive-item" data-year="2025"><div class="archive-thumb"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><div class="archive-meta"><div class="arch-title">N° 8 · 2025</div><div class="arch-date">23 febbraio 2025</div></div></div>
+
+          <div class="archive-item" data-year="2025"><div class="archive-thumb"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><div class="archive-meta"><div class="arch-title">N° 7 · 2025</div><div class="arch-date">16 febbraio 2025</div></div></div>
+
+          <div class="archive-item" data-year="2024"><div class="archive-thumb"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><div class="archive-meta"><div class="arch-title">Dicembre 2024</div><div class="arch-date">Avvento e Natale</div></div></div>
+
+          <div class="archive-item" data-year="2024"><div class="archive-thumb"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><div class="archive-meta"><div class="arch-title">Novembre 2024</div><div class="arch-date">Commemorazione dei defunti</div></div></div>
+
+          <div class="archive-item" data-year="2024"><div class="archive-thumb"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><div class="archive-meta"><div class="arch-title">Ottobre 2024</div><div class="arch-date">Mese del Rosario</div></div></div>
+
+          <div class="archive-item" data-year="2023"><div class="archive-thumb"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><div class="archive-meta"><div class="arch-title">Dicembre 2023</div><div class="arch-date">Avvento e Natale</div></div></div>
+
+          <div class="archive-item" data-year="2023"><div class="archive-thumb"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><div class="archive-meta"><div class="arch-title">Pasqua 2023</div><div class="arch-date">Triduo Pasquale</div></div></div>
+
+        </div>
+      </div>
+
+      <!-- NEWSLETTER -->
+      <div class="newsletter-strip">
+        <h3>Ricevi il foglietto via email</h3>
+        <p>Inserisci il tuo indirizzo per ricevere ogni settimana il foglietto direttamente nella tua casella di posta.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="la-tua-email@esempio.it">
+          <button type="button">Iscriviti</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Abbazia di Villanova</h3>
+        <p>Un luogo di storia, spiritualità e natura nel cuore di San Bonifacio.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Navigazione</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="storia.html">Storia</a></li>
+          <li><a href="chisiamo2.html">Chi siamo</a></li>
+          <li><a href="corsi.html">Corsi</a></li>
+          <li><a href="musei.html">Musei</a></li>
+          <li><a href="tour.html">Tour Virtuale</a></li>
+          <li><a href="parrocchia.html">Parrocchia</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contatti</h4>
+        <p>Villanova - San Bonifacio (VR)</p>
+        <p>Email: <a href="mailto:info@abbazia-villanova.it">info@abbazia-villanova.it</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Abbazia di Villanova di San Bonifacio – Tutti i diritti riservati</p>
+    </div>
+  </footer>
+
+  <script>
+    function filterYear(year, btn) {
+      document.querySelectorAll('.year-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.archive-item').forEach(item => {
+        item.classList.toggle('hidden', year !== 'all' && item.dataset.year !== year);
+      });
+    }
+  </script>
+
+</body>
+</html>
