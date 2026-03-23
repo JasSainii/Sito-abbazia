@@ -65,7 +65,7 @@ const TourVirtuale: React.FC = () => {
         {/* SEZIONE PITTURE */}
         <div className="mappa-container">
           <h3 style={{ fontFamily: 'Cormorant Garamond, serif', color: '#2e5d4b', fontSize: '1.8em', marginBottom: '15px' }}>Pitture Murali</h3>
-          <img src="img/sculture/pitture.png" useMap="#pitture" className="mappa" alt="Mappa Pitture" />
+          <img src="img/pitture.png" useMap="#pitture" className="mappa" alt="Mappa Pitture" />
           <map name="pitture">
             <area shape="circle" coords="1239,197,15" onMouseEnter={() => handleMouseEnter('p1')} onMouseLeave={() => setActiveOpera(null)} href="#" onClick={(e)=>e.preventDefault()} />
             <area shape="circle" coords="300,250,15" onMouseEnter={() => handleMouseEnter('p2')} onMouseLeave={() => setActiveOpera(null)} href="#" />
@@ -87,7 +87,7 @@ const TourVirtuale: React.FC = () => {
         {/* SEZIONE QUADRI */}
         <div className="mappa-container" style={{ marginTop: '50px' }}>
           <h3 style={{ fontFamily: 'Cormorant Garamond, serif', color: '#2e5d4b', fontSize: '1.8em', marginBottom: '15px' }}>Quadri ed Esposizioni</h3>
-          <img src="img/sculture/quadri.png" useMap="#quadri" className="mappa" alt="Mappa Quadri" />
+          <img src="img/quadri.png" useMap="#quadri" className="mappa" alt="Mappa Quadri" />
           <map name="quadri">
             <area shape="circle" coords="1114,283,15" onMouseEnter={() => handleMouseEnter('q1')} onMouseLeave={() => setActiveOpera(null)} href="#" />
             <area shape="circle" coords="1024,279,15" onMouseEnter={() => handleMouseEnter('q2')} onMouseLeave={() => setActiveOpera(null)} href="#" />
