@@ -26,13 +26,18 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Questo comando risolve l'errore "Permission denied" 
-      # dando i permessi di esecuzione a Vite su Linux
       - name: Fix permissions
         run: chmod +x node_modules/.bin/vite
 
       - name: Build
         run: npm run build
+
+      # IL TRUCCO: Copia la cartella img nella cartella dist che GitHub pubblicherà
+      - name: Copy images to dist
+        run: |
+          if [ -d "img" ]; then
+            cp -r img dist/
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
