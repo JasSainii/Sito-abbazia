@@ -15,6 +15,7 @@ export default defineConfig({
         chisiamo: resolve(__dirname, 'chisiamo.html'),
         chisiamo2: resolve(__dirname, 'chisiamo2.html'),
         corsi: resolve(__dirname, 'corsi.html'),
+        parrocchia: resolve(__dirname, 'parrocchia.html'),
       },
     },
   },
