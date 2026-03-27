@@ -63,12 +63,8 @@ nav a:hover {
   justify-content: flex-start; 
   align-items: flex-start;   
   text-align: left;
-  
-  
   padding-top: 80px;  
   padding-left: 80px; 
-
-  
   background-image: url('abbazia.jpg'); 
   background-size: cover;
   background-position: center;
@@ -172,33 +168,6 @@ nav a:hover {
   text-align: center;
 }
 
-/* ================== RESPONSIVE ================== */
-@media (max-width: 768px) {
-  header { 
-    flex-direction: column; 
-  }
-  .box { 
-    flex-direction: column; 
-    text-align: center; 
-  }
-  .hero h1 { 
-    font-size: 2em; 
-  }
-  .timeline {
-    width: 100%;
-    padding: 20px 0;
-    min-height: auto;
-  }
-  .event {
-    position: static;
-    transform: none;
-    margin: 20px auto;
-  }
-  .timeline-line {
-    display: none;
-  }
-}
-
 /* ================== FOOTER ================== */
 .footer {
   background: #2e5d4b;
@@ -213,7 +182,6 @@ nav a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -259,8 +227,63 @@ nav a:hover {
   font-size: 0.9em;
 }
 
-/* Responsive footer */
+/* ================== NUOVA SEZIONE VISITE GUIDATE (CENTRALIZZATA) ================== */
+.visite {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fdfaf3; /* Leggero stacco dallo sfondo bianco */
+}
+
+.visite .box {
+  justify-content: center;
+}
+
+.visite ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.visite ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(197, 162, 83, 0.2);
+}
+
+.visite h3 {
+  margin-top: 40px;
+  color: #bf5b16;
+}
+
+/* Evidenziamento Orari */
+.visite .text p:last-child {
+  display: inline-block;
+  background: #fff;
+  border: 2px solid #C5A253;
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-top: 20px;
+  line-height: 2;
+}
+
+.visite b {
+  color: #2e5d4b;
+  font-size: 1.1em;
+}
+
+/* ================== RESPONSIVE GENERALE ================== */
 @media (max-width: 768px) {
+  header { 
+    flex-direction: column; 
+  }
+  .box { 
+    flex-direction: column; 
+    text-align: center; 
+  }
+  .hero h1 { 
+    font-size: 2em; 
+  }
   .footer-container {
     text-align: center;
   }
@@ -337,12 +360,3 @@ nav a:hover {
     opacity: 0;
   }
 }
-
-
-
-
-
-
-
-
-
