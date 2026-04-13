@@ -78,14 +78,13 @@ nav a:hover {
   margin: 0 0 10px 0; 
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  -webkit-text-stroke: #000000 1px;
+  -webkit-text-stroke: #000000 0px;
 }
 
 .hero p { 
   font-size: 1.8em; 
   max-width: 800px;
   margin: 0; 
-  -webkit-text-stroke: #bf5b16 1px;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
